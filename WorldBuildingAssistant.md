@@ -5,7 +5,7 @@
 
 ## VERSION
 
-**Current Version:** 1.2.0
+**Current Version:** 1.2.1
 **Last Updated:** 2026-04-26
 **Format:** Semantic versioning — MAJOR.MINOR.PATCH
 
@@ -21,6 +21,7 @@
 
 | Version | Date | Summary of Changes |
 |---|---|---|
+| 1.2.1 | 2026-04-26 | GitHub repository URL added to Project Overview. |
 | 1.2.0 | 2026-04-26 | Canon Registry populated with 16 confirmed entries (several marked NAME PENDING). Glossary populated with 15 terms (several marked NAME PENDING). To-Do List updated — /import task completed, new naming and design tasks added. Gods.md flagged for pre-pantheon section addition. Session log entry added. |
 | 1.1.0 | 2026-04-26 | All 12 auxiliary files created and marked as existing in the registry. /log command behavior expanded — now produces both a session log entry and a full export packet for GitHub sync. First session log entry added. To-Do List updated to reflect completed tasks. |
 | 1.0.0 | 2026-04-26 | Initial document created. Three personas defined (/editor, /historian, /player). Core commands established. Auxiliary file system introduced. Version system established. /import, /review, and /status commands defined. Persona wrap-up behavior specified. |
@@ -102,6 +103,7 @@ This file is the **brain** of the project — it defines how the AI behaves, whi
 **TTRPG System:** Homebrew / System-Agnostic
 **Primary Themes:** *(To be filled in)*
 **Current Development Phase:** Early sketching
+**GitHub Repository:** https://github.com/jermoe1/WorldBuildingRepo
 
 ### Key Creative Goals
 - *(To be filled in)*
@@ -913,5 +915,5 @@ Use `/assistant` at any time to end an active persona session and return to Gene
 
 ---
 
-*— WorldBuildingAssistant.md — Version 1.2.0 — Last updated 2026-04-26 —*
+*— WorldBuildingAssistant.md — Version 1.2.1 — Last updated 2026-04-26 —*
 *This document governs behavior only. All lore lives in the auxiliary files listed in the Auxiliary File Registry.*
