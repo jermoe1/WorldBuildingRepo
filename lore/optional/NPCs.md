@@ -56,6 +56,53 @@ Each named character gets an entry. Player characters are not recorded here — 
 
 ## NAMED CHARACTERS
 
+### Rethavyn Cassel
+**Also Known As:** *(none recorded)*
+**Role:** Senior Archivist — Collegium of Primordial Records; the foremost scholarly authority on the Genesis Era in their time
+**Status:** Dead *(historical figure — active during the [Unnamed Era])*
+**Location:** *(unknown — no institution site confirmed)*
+**Faction Affiliation:** Collegium of Primordial Records
+**Faith:** Unknown
+
+**Appearance**
+*(no physical record preserved)*
+
+**Background**
+A scholar of the [Unnamed Era] who dedicated their life to reconstructing the Genesis Era through cosmological inference, resonance-trace analysis of the Astral Sea, theological accounts, and structural analysis of the planes. Founded or led the Collegium of Primordial Records, an institution whose sole purpose was recovering knowledge of an epoch that preceded all witnesses.
+
+**Personality & Voice**
+Rigorously neutral and methodologically precise. Cassel distinguished carefully between what was documented, what was disputed, and what was unknown — and labeled each category explicitly. Their scholarship is characterized by intellectual honesty about the limits of the record. The blurb associated with their name in Collegium texts reads: *"Nearly everything in my field is reconstructed inference. No mortal witnessed these events."*
+
+**Motivations**
+- **Wants:** *(historical — the preservation and reconstruction of pre-Emoran cosmological knowledge)*
+- **Needs:** *(unknown)*
+- **Fears:** *(unknown)*
+
+**Capabilities**
+Exceptional cosmological scholar. Capable of deriving meaningful inference from resonance-traces and structural cosmological analysis. Their methodological framework became the standard for Genesis Era research.
+
+**Relationships**
+*(no records preserved — the unnamed researcher whose dwelling explosion empirically confirmed Cassel Sphere destructiveness may have been a contemporary or student)*
+
+**History**
+Active during the [Unnamed Era]. Conducted foundational research into the Genesis Era, the 16 primordial entities, and the developmental threshold system. Their name was given to the Cassel Spheres — the compressed formations within gaseous mana entities — as a posthumous honor.
+
+**Current Situation**
+*(Deceased. Legacy survives through the Cassel Sphere naming convention and any Collegium records that survived the near-extinction event at the Unnamed Era's close.)*
+
+**Plot Hooks**
+- Recovering surviving Collegium of Primordial Records texts could yield cosmological knowledge unavailable anywhere else.
+- Whether the Collegium survived the near-extinction event — even partially — is an open question.
+- An unnamed researcher whose dwelling exploded may be connected to Cassel; was it a student, a rival, a colleague?
+
+**Notes & Open Questions:**
+- ⚠️ Era of activity: [Unnamed Era] — update this entry when that era receives its in-world name.
+- The Collegium of Primordial Records: does it still exist in some form in the Current Era? If so, where? If not, what happened to it?
+- Whether Rethavyn Cassel was the founder of the Collegium or a later archivist is undefined.
+- Gender/pronouns unspecified — use "they/their" until confirmed.
+
+---
+
 ### The Red Death
 **Also Known As:** The Red Death *(in-world moniker — may not be their actual name)*
 **Role:** Wandering antagonist / Living legend

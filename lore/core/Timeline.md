@@ -55,11 +55,12 @@ Three timelines run simultaneously (Canon #21). All events should carry a date i
 ```
 
 ### Genesis Era
-**Approximate Dates:** U.Y. 0 – [The Collision]
-**Character:** The primordial period. Raw mana crystallizes from the Astral Sea, entities form and grow through developmental thresholds, divide upon reaching 16 memory orbs, and repeat until 16 distinct primordial entities fill the Astral Sea and collide.
+**Approximate Dates:** U.Y. 0 – [The Collision] *(duration is not meaningfully measurable — time as a concept did not exist before the formation of the planes; Canon #27)*
+**Character:** The primordial period. Raw mana crystallizes from the Astral Sea, entities form and grow through developmental thresholds, divide upon reaching 16 Cassel Spheres, and repeat until 16 distinct primordial entities fill the Astral Sea and collide.
 **Key Events:** The First Coalescence; Threshold events (1, 2, 3); the 16-entity genealogical cycle; The Collision
-**How It Ended:** The Collision — the 16 primordial entities made contact, producing a cascading explosion that formed the first planes (Canon #11).
-**Cross-reference:** Canon #1–#12; Gods.md (pre-pantheon genealogical tree)
+**How It Ended:** The Collision — incidental high-friction contact between two entities cascaded as a chain reaction across all 16, producing an explosion that formed the first planes (Canon #11, #26).
+**Notes on the Record:** All Genesis Era knowledge is reconstructed inference. No witness existed to record these events. Primary scholarly authority: the Collegium of Primordial Records (active [Unnamed Era]).
+**Cross-reference:** Canon #1–#12, #25–#28; Gods.md (pre-pantheon genealogical tree)
 
 ---
 
