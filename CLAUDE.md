@@ -10,7 +10,7 @@ See [WorldBuildingAssistant.md](WorldBuildingAssistant.md) for the primary world
 
 ## VERSION
 
-**Current Version:** 1.3.0
+**Current Version:** 1.4.0
 **Last Updated:** 2026-04-26
 **Format:** Semantic versioning — MAJOR.MINOR.PATCH
 
@@ -26,6 +26,7 @@ See [WorldBuildingAssistant.md](WorldBuildingAssistant.md) for the primary world
 
 | Version | Date | Summary of Changes |
 |---|---|---|
+| 1.4.0 | 2026-04-26 | keepnotes1.txt import processed — Canon entries 17–23 added, Canon #14 amended for lesser planes. Glossary expanded with 31 new terms. Geography, Timeline, Factions, NPCs, Artifacts, MagicSystem, GameMechanics, and NamingConventions all updated. |
 | 1.3.0 | 2026-04-26 | All command syntax changed from `/command` to `Run command:` format to avoid Claude Code CLI interception. |
 | 1.2.1 | 2026-04-26 | GitHub repository URL added to Project Overview. |
 | 1.2.0 | 2026-04-26 | Canon Registry populated with 16 confirmed entries (several marked NAME PENDING). Glossary populated with 15 terms (several marked NAME PENDING). To-Do List updated — Run import task completed, new naming and design tasks added. Gods.md flagged for pre-pantheon section addition. Session log entry added. |
@@ -700,9 +701,16 @@ Use `Run assistant` at any time to end an active persona session and return to G
 | 11 | The 16 primordial entities colliding produced a cascading chain-reaction explosion that formed the first planes. | — | Universal Creation Lore.md / Import 2026-04-26 | 2026-04-26 |
 | 12 | The strongest of the 16 primordial entities left lingering essence that reformed into the first Divine and Mythical beings. | — | Universal Creation Lore.md / Import 2026-04-26 | 2026-04-26 |
 | 13 | The Divine Realm was created by the Divine beings themselves at a later point, specifically to reduce their interference in the Mortal Plane. | — | Universal Creation Lore.md / Import 2026-04-26 | 2026-04-26 |
-| 14 | The confirmed planes are: Mortal Plane, Fey Realm, Astral Sea/Plane, Demon Plane, Devil Plane, Elemental Planes (Air, Fire, Water, Earth), Ethereal Plane, Shadowfell, Divine Realm. | ⚠️ **NAME PENDING** — "Demon Plane" and "Devil Plane" are placeholders. Design anchor: Demon Plane = chaotic/anarchic character; Devil Plane = lawful/hierarchical character. Original names required. | Universal Creation Lore.md / Import 2026-04-26 | 2026-04-26 |
+| 14 | The confirmed planes are: Mortal Plane, Fey Realm, Astral Sea/Plane, Demon Plane, Devil Plane, Elemental Planes (Air, Fire, Water, Earth), Ethereal Plane, Shadowfell, Divine Realm. | ⚠️ **NAME PENDING** — "Demon Plane" and "Devil Plane" are placeholders. Design anchor: Demon Plane = chaotic/anarchic character; Devil Plane = lawful/hierarchical character. Original names required. Lesser blended planes also exist — see Canon #23. | Universal Creation Lore.md / Import 2026-04-26 | 2026-04-26 |
 | 15 | The Shadowfell is a dark counterpart to the Fey Realm. | — | Universal Creation Lore.md / Import 2026-04-26 | 2026-04-26 |
 | 16 | The entity power hierarchy has 8 tiers. Tier 1 (Divine) is the highest. Tier 8 is Mortal. Tier 7 is currently undefined — a class of beings weaker than Mortal may be defined in the future and placed at tier 8, shifting Mortal to tier 7. Tiers 5 and 6 are also undefined. | ⚠️ **TIERS 5, 6, 7 TBD** — Update this entry as tiers are defined. | Universal Creation Lore.md / Import 2026-04-26 | 2026-04-26 |
+| 17 | The planet of the Mortal Plane is named **Emora**. | — | keepnotes1.txt / Import 2026-04-26 | 2026-04-26 |
+| 18 | The historical eras of Emora's existence, in order: Genesis Era → Emergence Era → Planar War Era → Dawning Era → [Unnamed Era] → Current Era (unnamed). | ⚠️ **NAME PENDING** — the Unnamed Era and the Current Era both require in-world names. | keepnotes1.txt / Import 2026-04-26 | 2026-04-26 |
+| 19 | The **Treaty of the Dawn** is the magical founding agreement of the Dawning Era. All interplanar travelers receive a mark upon crossing planes; the mark prevents them from harming or exploiting inhabitants of the destination plane. The treaty applies to all planes and all directions of travel. Certain factions are actively working to circumvent it. | — | keepnotes1.txt / Import 2026-04-26 | 2026-04-26 |
+| 20 | **Yanuhfroh** is the primary Planar Hub for interplanar travel to and from the Mortal Plane. It is governed by complex magical pacts, characterized by near-militant civic cleanliness, and its portal districts have developed over generations to mirror the aesthetics, flora, fauna, and architectural character of their destination planes. | — | keepnotes1.txt / Import 2026-04-26 | 2026-04-26 |
+| 21 | Three parallel timelines track the world's history: **Universal** (U.Y., beginning at The First Coalescence), **Emora** (E.Y., beginning tens of thousands of U.Y. later), and **Modern** (abbreviation TBD; beginning 4,000–7,000 E.Y. into the Emoran Timeline, at the start of the Current Era). | ⚠️ **NAMING PENDING** — Modern timeline abbreviation and year-naming convention TBD; must relate to an in-world event at the Current Era's start. | keepnotes1.txt / Import 2026-04-26 | 2026-04-26 |
+| 22 | The number **16** is a recurring significant number in the world's cosmological structure (see Canon #8 and #10). The in-world calendar will incorporate 16 as a thematically significant unit. | — | keepnotes1.txt / Import 2026-04-26 | 2026-04-26 |
+| 23 | **Lesser planes** (blended planes) exist as pocket dimensions or smaller planes formed from the overlap of two primary elemental planes. They are smaller and less easily traversed than the primary planes. Lesser beings may reside in these spaces. Known examples: Ice Plane (Water + Air), Swamp Plane (Water + Earth). | ⚠️ **NAME PENDING** — "Ice Plane" and "Swamp Plane" are placeholders requiring original in-world names. Additional lesser planes may exist. | keepnotes1.txt / Import 2026-04-26 | 2026-04-26 |
 
 ---
 
@@ -717,21 +725,55 @@ Use `Run assistant` at any time to end an active persona session and return to G
 | Term | Type | Definition | Status | First Appears In |
 |---|---|---|---|---|
 | Astral Sea | Place / Cosmological | The primordial expanse of raw mana that preceded all existence. Origin point of the universe. Persists as a plane after the Collision. | Stable | Universal Creation Lore.md |
-| The Collision | Event | The cataclysmic contact between the 16 primordial entities that produced the planes and the first Divine and Mythical beings. | Stable | Universal Creation Lore.md |
+| Bay of Bairune | Place / Body of Water | A named bay on Emora. Relationship to the Sea of Azzir TBD. | Stable | keepnotes1.txt / Import 2026-04-26 |
+| [Broomstone] | Material / Magical | An ultra-rare levitation material. A few ounces, properly activated, can lift a Skiff-sized vessel to cloud level. Source and activation method TBD. | ⚠️ **NAME PENDING** — "Broomstone" may or may not be the in-world name | keepnotes1.txt / Import 2026-04-26 |
+| The Collision | Event | The cataclysmic contact between the 16 primordial entities that produced the planes and the first Divine and Mythical beings. Closes the Genesis Era. | Stable | Universal Creation Lore.md |
+| Colossal Gate | Place / Landmark | An enormous ancient stone arch secretly functioning as a mega-portal to another plane. Its true nature is unknown to all inhabitants of the modern era. Destination plane TBD. | Stable (concept) | keepnotes1.txt / Import 2026-04-26 |
+| [Copycat Silence] | Faction | A group attempting to imitate Silence's ability to cast without verbal components. Does not appear to possess the genuine capability. | ⚠️ **NAME PENDING** | keepnotes1.txt / Import 2026-04-26 |
+| Current Era | Era | The final era — begins after the near-extinction event on Emora, in the rebuilding period. Takes hundreds of years to properly reconstruct. Most TTRPG campaigns are set here. | ⚠️ **NAME PENDING** — in-world name TBD | keepnotes1.txt / Import 2026-04-26 |
+| Dawning Era | Era | Begins with the Treaty of the Dawn. Ends when the Divine beings separate themselves from the other planes. A period of new order and relative stability. | Stable | keepnotes1.txt / Import 2026-04-26 |
 | Demon Plane | Place | Plane of demonic entities. Design anchor: chaotic, anarchic in character. Distinct from the Devil Plane. | ⚠️ **NAME PENDING** — placeholder | Universal Creation Lore.md |
 | Devil Plane | Place | Plane of devilish entities. Design anchor: lawful, hierarchical in character. Distinct from the Demon Plane. | ⚠️ **NAME PENDING** — placeholder | Universal Creation Lore.md |
 | Divine Realm | Place | Plane created by Divine beings to reduce their interference in the Mortal Plane. Created after the initial plane formation, not during the Collision. | Stable | Universal Creation Lore.md |
+| Dragon's Vault | Faction | A financial organization dealing in wealth and ancient draconic secrets. Currently in an expansion phase. | Stable | keepnotes1.txt / Import 2026-04-26 |
+| E.Y. | Abbreviation | Emora Year — the dating convention of the Emoran Timeline. Begins tens of thousands of U.Y. into the Universal Timeline. | Stable | keepnotes1.txt / Import 2026-04-26 |
+| Emergence Era | Era | The period after The Collision when Divine and Mythical beings explore the newly-formed planes and develop their identities. | Stable | keepnotes1.txt / Import 2026-04-26 |
+| Emora | Place / World | The planet of the Mortal Plane. The primary setting of the world. | Stable | keepnotes1.txt / Import 2026-04-26 |
 | Ethereal Plane | Place | A plane that can be entered or passed through via certain spells and abilities (e.g., Blink, Ethereal Step). | Stable | Universal Creation Lore.md |
 | Fey Realm | Place | Plane of fey beings. | Stable | Universal Creation Lore.md |
 | [Gaseous Phase Form] | Concept / Cosmological | The second structural form of a mana entity — gaseous, mobile, and containing memory orbs. More nimble than the crystalline form. Emerges after Threshold 3 transformation. | ⚠️ **NAME PENDING** — placeholder; requires in-world name | Universal Creation Lore.md |
+| Genesis Era | Era | The primordial period from The First Coalescence through The Collision. Raw mana crystallizes, entities form, grow, and divide until the 16 primordial entities collide. | Stable | keepnotes1.txt / Import 2026-04-26 |
+| Golden Arrow | Faction | Also known as: Rangers Guild. A widespread wilderness scouting organization with affiliate taverns and bases near frontier areas. | Stable | keepnotes1.txt / Import 2026-04-26 |
+| [Haunted Reef] | Place / Landmark | A reef or sandbar on Emora with a haunted reputation. Nature of the haunting TBD. | ⚠️ **NAME PENDING** | keepnotes1.txt / Import 2026-04-26 |
+| Heptathurge | Faction | A council of seven powerful magical authorities. Governs a magic-forward city with commanding authority. Possible home base: The Arcane Jewel (unconfirmed). | Stable | keepnotes1.txt / Import 2026-04-26 |
+| [Ice Plane] | Place / Lesser Plane | A lesser blended plane — a pocket dimension formed from the overlap of the Water and Air elemental planes. Smaller and less accessible than primary planes. Lesser beings may reside here. | ⚠️ **NAME PENDING** — "Ice Plane" is a placeholder | keepnotes1.txt / Import 2026-04-26 |
+| [Ilketh Proclamation] | Event | A historical declaration or agreement. Who or what "Ilketh" refers to is undefined. Era TBD. | ⚠️ **UNDEVELOPED** — name only; content undefined | keepnotes1.txt / Import 2026-04-26 |
 | Mana | Concept / Magical | Raw magical energy; the fundamental substance of the universe. Exhibits emergent quasi-organic properties at sufficient concentrations. Underpins all developmental thresholds and entity behavior. | Stable | Universal Creation Lore.md |
 | [Memory Orbs] | Object / Cosmological | Dense compressed formations within a gaseous mana entity. Function as neural pathways or knowledge storage. Collision between two orbs damages the entity. Accumulation of 16 triggers the division cycle. | ⚠️ **NAME PENDING** — placeholder; requires in-world name | Universal Creation Lore.md |
-| Mortal Plane | Place | The primary plane of mortal life. | Stable | Universal Creation Lore.md |
+| [Mirage Island] | Place / Anomalous | An island that cannot be found by deliberate navigation — reached only by accident. Details TBD. | ⚠️ **NAME PENDING** | keepnotes1.txt / Import 2026-04-26 |
+| Mortal Plane | Place | The primary plane of mortal life. The planet Emora resides here. | Stable | Universal Creation Lore.md |
+| Obligant's Trust | Faction | A faction based in Yanuhfroh. Likely connected to the city's magical pact governance. Exact purpose TBD. | Stable | keepnotes1.txt / Import 2026-04-26 |
+| [Pact of Shadows] | Event | A historical agreement or compact. Era and parties undefined. | ⚠️ **UNDEVELOPED** — name only; content undefined | keepnotes1.txt / Import 2026-04-26 |
+| [Phyrric Ascent] | Place / Notable Site | A location whose name or nature relates to a victory won at ruinous cost. Details TBD. | ⚠️ **NAME PENDING** | keepnotes1.txt / Import 2026-04-26 |
+| [Planar Acquiescence] | Event | A historical event — possibly Dawning Era. Name carries a "?" in source notes; may not be finalized. | ⚠️ **UNDEVELOPED** — name and content undefined | keepnotes1.txt / Import 2026-04-26 |
+| Planar War Era | Era | The era of interplanar conflict — ambitious Divinities and opportunistic Mythical entities breach other planes to conquer or destroy. Ends with the Treaty of the Dawn. | Stable | keepnotes1.txt / Import 2026-04-26 |
+| The Red Death | NPC / Legend | A merciless wandering antagonist. Rumored to gain life by taking it from targets. Alignment genuinely unknown. | Stable | keepnotes1.txt / Import 2026-04-26 |
+| Sea of Azzir | Place / Body of Water | A named sea on Emora. Adjacent regions and settlements TBD. | Stable | keepnotes1.txt / Import 2026-04-26 |
 | Shadowfell | Place | Dark counterpart to the Fey Realm. | Stable | Universal Creation Lore.md |
+| Silence | Faction | An organization whose members cast spells without verbal components. Emblem: the cut lip. | Stable | keepnotes1.txt / Import 2026-04-26 |
+| Siren's Call | Faction | A musically-inclined organization. Purpose and structure TBD. | Stable | keepnotes1.txt / Import 2026-04-26 |
+| [Soul Sconce] | Object / Dark Magic | A soul imprisoned in a hardened crystal via dark ritual, used to power significant magical constructs or effects. Crystal type TBD. | ⚠️ **NAME PENDING** — "Soul Sconce" may or may not be the in-world term | keepnotes1.txt / Import 2026-04-26 |
+| [Swamp Plane] | Place / Lesser Plane | A lesser blended plane — a pocket dimension formed from the overlap of the Water and Earth elemental planes. Smaller and less accessible than primary planes. Lesser beings may reside here. | ⚠️ **NAME PENDING** — "Swamp Plane" is a placeholder | keepnotes1.txt / Import 2026-04-26 |
+| [Sword of Damocles] | Ritual / Artifact Concept | A ritual that marks Candidates chosen by the essence of Emora for specific virtues. Marked individuals receive a boon and a growing compulsion to converge at a landmark. When all living Candidates are within 1,000 meters, an event triggers. | ⚠️ **NAME PENDING** — "Sword of Damocles" is a real-world term; requires an in-world name | keepnotes1.txt / Import 2026-04-26 |
 | [The First Coalescence] | Event | The singular origin event — two fragments of the universe merging, triggering the crystallization of all mana and the beginning of existence. | ⚠️ **NAME PENDING** — placeholder; requires in-world name | Universal Creation Lore.md |
 | [Threshold 1] | Concept / Cosmological | First developmental stage of a mana entity. Grants spatial awareness and active movement toward nearby mana. Mana quantity required: TBD. | ⚠️ **NAME PENDING** — placeholder; will be renamed and assigned a mana quantity value | Universal Creation Lore.md |
 | [Threshold 2] | Concept / Cosmological | Second developmental stage of a mana entity. Grants pattern recognition and strategic, optimized behavior. Mana quantity required: TBD. | ⚠️ **NAME PENDING** — same conditions as Threshold 1 | Universal Creation Lore.md |
 | [Threshold 3] | Concept / Cosmological | Third developmental stage of a mana entity. Triggers structural transformation: hibernation → shattering → gaseous reformation with memory orbs. Mana quantity required: TBD. | ⚠️ **NAME PENDING** — same conditions as Threshold 1 | Universal Creation Lore.md |
+| Treaty of the Dawn | Event / Legal | The magical founding agreement of the Dawning Era. Imposes a mark on all interplanar travelers, restricting harm to other planes' inhabitants. Certain factions seek to circumvent it. | Stable | keepnotes1.txt / Import 2026-04-26 |
+| U.Y. | Abbreviation | Universal Year — the dating convention of the Universal Timeline. Begins at The First Coalescence. | Stable | keepnotes1.txt / Import 2026-04-26 |
+| [Unnamed Era] | Era | The era between the Divine separation and the near-extinction event on Emora. In-world name TBD. | ⚠️ **NAME PENDING** | keepnotes1.txt / Import 2026-04-26 |
+| [The Void] | Faction | An unknown organization. Name flagged for replacement — too generic. Purpose undefined. | ⚠️ **NAME PENDING** | keepnotes1.txt / Import 2026-04-26 |
+| [Voting Coins] | Artifact | Ancient artifacts that magically bind groups of three or more holders to the majority decision under penalty of escalating pain to death. | ⚠️ **NAME PENDING** — "Voting Coins" may not be the in-world name | keepnotes1.txt / Import 2026-04-26 |
 
 ---
 
@@ -751,12 +793,25 @@ Use `Run assistant` at any time to end an active persona session and return to G
   - Gaseous Phase Form (in-world name for the post-Threshold 3 entity state)
   - Demon Plane (original name; design anchor: chaotic/anarchic)
   - Devil Plane (original name; design anchor: lawful/hierarchical)
+  - Ice Plane (original name; design anchor: Water + Air blend, lesser plane)
+  - Swamp Plane (original name; design anchor: Water + Earth blend, lesser plane)
+  - Unnamed Era (the era between Divine separation and the near-extinction event on Emora)
+  - Current Era (in-world name; must relate to the event that opens the era)
+  - Modern Timeline abbreviation (year naming convention TBD; must relate to the Current Era's opening event)
+  - Sword of Damocles (in-world name for the candidate-marking ritual)
+  - The Void faction (too generic — rename before developing)
+  - Copycat Silence faction (needs a name)
+  - Unnamed Artificer Faction (needs a name and home city)
 - [ ] **Populate NamingConventions.md** — establish phonetic and stylistic rules before naming accumulates further
 
 ### 🟡 Medium Priority
 
 - [ ] **Draft the Primordial Entity genealogical tree** — 16 entities structured from the first division outward. Required before the pre-pantheon section of `Gods.md` can be populated. Key design constraint: each split must produce meaningful divergence; traits compound across generations.
 - [ ] **Define the Demon/Devil distinction** — what separates demons from devils in this world beyond plane of origin? Establish the thematic and functional distinction before naming the planes.
+- [ ] **Name the unnamed city and site concepts** — 9 locations need proper names before they can be developed: The Arcane Jewel city, Tropical Coastal City, Icy Port City, Lake City, Central Trading City, Wooden Druid Village, Abandoned Industrial City, Haunted Reef/Sandbar, Mirage Island.
+- [ ] **Define Errewon's movement and nature** — the floating city moves around the world. What drives its movement (random drift? a pattern? entity-directed?)? What powers it? Can it be stopped or boarded?
+- [ ] **Resolve the Obligant's Trust** — what exactly does this faction do in Yanuhfroh? Pact enforcement? Contract mediation? Define their role before the city can be fully developed.
+- [ ] **Define the Treaty of the Dawn enforcement structure** — who polices violations? Is there an interplanar authority? What are the known loopholes factions are exploiting?
 
 ### 🟢 Low Priority / Someday
 
@@ -766,6 +821,7 @@ Use `Run assistant` at any time to end an active persona session and return to G
 
 ### ✅ Completed Tasks
 
+- [x] **Run import: keepnotes1.txt** — processed into Geography.md, Timeline.md, Factions.md, NPCs.md, Artifacts.md, MagicSystem.md, GameMechanics.md, NamingConventions.md. Canon entries 17–23 confirmed. Glossary expanded to 46 terms. *(2026-04-26)*
 - [x] **Run import: Universal Creation Lore.md** — processed into Timeline.md, MagicSystem.md, Geography.md, Peoples.md/Gods.md (hierarchy), and flagged unplaced content *(2026-04-26)*
 - [x] **Create all auxiliary files** — all 12 files scaffolded with entry templates and cross-reference headers *(2026-04-26)*
 - [x] **Establish GitHub repo structure** — folder layout, README, CHANGELOG, export workflow, and Run log template defined *(2026-04-26)*

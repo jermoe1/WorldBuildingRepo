@@ -74,8 +74,35 @@ These may reflect distinct cultural regions. Confirm as Peoples.md and Geography
 > Unused names ready to be assigned. Names here have been vetted for consistency with the relevant convention but not yet attached to any person, place, or thing. When a name is assigned, move it to the appropriate auxiliary file and the Glossary.
 
 ### NPC Names — Unassigned
-*(By culture / region — note which convention each name follows)*
-- *(Name — [Convention])*
+*(Convention unknown — assign to a culture/region when one is established)*
+
+| Name | Notes |
+|---|---|
+| Erianna | |
+| Drathor | |
+| Leona | |
+| Thralkin | |
+| Grisa | |
+| Rezzyl | |
+| Aliara | |
+| Bryyan | |
+| Veldamin | |
+| Arfan | |
+| Isparna | |
+| Lourna | |
+| Birtrain | |
+| Faerwyn | |
+| Viera | |
+| Xanna | |
+| Weiran | |
+| Revlanna | |
+| Blare | |
+| Avera | |
+| Amiara | |
+| Damian | |
+| Shailara | |
+| Novus | |
+| Sebaris | |
 
 ### Location Names — Unassigned
 - *(Name — [Convention])*

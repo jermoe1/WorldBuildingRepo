@@ -71,11 +71,47 @@ This file has two layers: **Fundamentals** (the rules that govern all magic in t
 
 ---
 
+## DESIGN CONSTRAINTS
+
+> Hard rules about what magic can and cannot do. Established before the full system is developed.
+
+### Restricted Magical Flight
+Magical flight via spell (e.g., Fly) either does not exist or is extraordinarily rare in this world. The dominant mechanism of magical levitation is Broomstone.
+
+**Broomstone**
+An ultra-rare material of exceptional levitation potency. A few ounces, properly activated, are sufficient to lift a vessel as large as a Skiff to cloud level. The material requirement scales for larger vessels are TBD, but the weight-to-lift ratio is dramatically powerful even in small quantities.
+
+**Notes & Open Questions:**
+- Is Broomstone mined? Created? Harvested from a creature, plane, or magical phenomenon?
+- What does "properly activated" mean — a ritual, a practitioner, a specific trigger condition?
+- Does Broomstone sustain levitation indefinitely, or does it exhaust?
+- Can it be deactivated or weaponized?
+- ⚠️ **NAME PENDING** — "Broomstone" may or may not be the in-world name; confirm when magic system is developed.
+
+---
+
 ## MAGICAL PHENOMENA
 
 > Naturally occurring magical events, locations, or entities that exist independent of practitioners.
 
-*(To be filled in.)*
+### Portal Disruption Events
+Occasional failures or flickers in the planar travel network. The mechanism and cause of these disruptions are undefined — they may be natural, induced by factions, or symptoms of something larger.
+
+**Notes & Open Questions:**
+- How frequent are disruptions — seasonal, random, triggered?
+- Are they localized (one portal) or network-wide?
+- Can they be predicted, caused deliberately, or exploited?
+- What happens to Yanuhfroh during a disruption? Cross-reference Geography.md.
+
+---
+
+### Soul Sconces *(Dark Ritual)*
+A soul ripped from a body and imprisoned within a hardened crystal via dark ritual. The imprisoned soul powers significant magical constructs or effects.
+
+**Notes & Open Questions:**
+- Crystal type TBD.
+- Is the soul conscious while imprisoned?
+- Who practices this ritual? Cross-reference Artifacts.md (Soul Sconce entry) and Factions.md.
 
 ---
 
