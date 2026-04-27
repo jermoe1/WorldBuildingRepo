@@ -15,7 +15,10 @@ Establish naming rules **before** names accumulate. Every name in the Glossary s
 
 > Rules that apply across all naming in this world.
 
-*(To be filled in — e.g., "Names never use the letter Q," "Apostrophes indicate a hard break between syllables," "Divine names always end in a vowel," etc.)*
+- **Apostrophe usage** — Seen in `Dho'Vasta` and `Dho'Varra`. Appears to mark a hard break between a cultural prefix and the proper name root. Whether this is a glottal stop or a stylistic separator requires confirmation. *(Formalize when the desert culture is developed.)*
+- **Directional prefixes** — `East Lukerr` implies a convention of compass-point modification for settlements within a named region (East/West/North/South + toponym). Establish whether other Lukerr settlements exist before treating this as a general rule.
+- **`Port` prefix** — Used straightforwardly for maritime cities (`Port Abaine`, `Port Klior`). Consistent with real-world convention; no invented language implied.
+- **Two apparent phonetic families in city names** — A short/punchy cluster (Ghliar, Edoh, Boreal) and a longer/more exotic cluster (Yanuhfroh, Kynesfree, Errewon). These may reflect distinct cultural origins. *(Confirm when regional cultures are developed in Peoples.md.)*
 
 ---
 
@@ -35,7 +38,16 @@ Establish naming rules **before** names accumulate. Every name in the Glossary s
 **Notes:**
 ```
 
-*(No conventions recorded yet.)*
+---
+
+### Desert Culture — `Dho'` Prefix
+**Cross-reference:** Geography.md (Dho'Vasta, Dho'Varra) / Peoples.md *(desert peoples — not yet developed)*
+**Phonetic Character:** Prefix `Dho'` followed by a multi-syllable root. Apostrophe marks the break.
+**Syllable Patterns:** *(unknown — two examples only; insufficient to establish pattern)*
+**Naming Customs:** *(unknown)*
+**Forbidden Sounds or Structures:** *(unknown)*
+**Examples (confirmed):** Dho'Vasta, Dho'Varra
+**Notes:** The meaning of `Dho'` is undefined. Could be a word for city, region, clan, or something specific to desert culture. Expand when desert peoples are developed in Peoples.md.
 
 ---
 
@@ -50,7 +62,10 @@ Establish naming rules **before** names accumulate. Every name in the Glossary s
 *(To be filled in)*
 
 ### Places (General)
-*(To be filled in — are place names descriptive? Historical? In a dead language?)*
+Two phonetic families visible in the current city pool:
+- **Short/consonant-heavy:** Ghliar, Edoh, Boreal — one or two syllables, often featuring consonant clusters.
+- **Longer/exotic:** Yanuhfroh, Kynesfree, Errewon — multi-syllable, unusual vowel combinations.
+These may reflect distinct cultural regions. Confirm as Peoples.md and Geography.md develop.
 
 ---
 
