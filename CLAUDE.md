@@ -1,8 +1,3 @@
-# Instructions
-See [WorldBuildingAssistant.md](WorldBuildingAssistant.md) for the primary worldbuilding assistant guidelines.
-
----
-
 # WorldBuildingAssistant — Master Instruction File
 > This is the base configuration file for the AI worldbuilding assistant. It governs behavior, personas, commands, and project structure. It does not store lore or tracking data. Lore lives in auxiliary files listed in the Auxiliary File Registry. Tracking data (canon, glossary, to-do, session logs, etc.) lives in the Tracking Files listed below.
 
@@ -84,21 +79,21 @@ This file is the **behavior layer** of the project — it defines how the AI act
 | File | Contents | Status |
 |---|---|---|
 | `Gods.md` | Pantheon entries, divine domains, relationships between gods, worship practices, current status (active/dormant/dead). **Also contains pre-pantheon section: genealogical tree of the 16 primordial entities.** | Scaffold — pre-pantheon section flagged for addition; no lore content yet |
-| `Geography.md` | Locations, regions, cities, ruins, wilderness areas, map notes, travel and scale | Scaffold — no lore content yet |
-| `Factions.md` | Political powers, cults, guilds, nations, armies — goals, structure, key figures, relationships to other factions | Scaffold — no lore content yet |
+| `Geography.md` | Locations, regions, cities, ruins, wilderness areas, map notes, travel and scale | Partial — 15+ settlements, notable sites including Stillpoint; most entries are stubs |
+| `Factions.md` | Political powers, cults, guilds, nations, armies — goals, structure, key figures, relationships to other factions | Partial — 8 factions with core concepts defined; details sparse |
 | `MagicSystem.md` | Rules of magic, sources, costs, limitations, cultural perception, known traditions and practitioners | Scaffold — no lore content yet |
 | `Peoples.md` | Sapient races, ethnicities, cultures — origins, traits, languages, relationships to others | Scaffold — no lore content yet |
-| `Timeline.md` | Chronological event log — eras, dates, pivotal events, cause and effect chains | Scaffold — no lore content yet |
-| `NamingConventions.md` | Phonetic and stylistic rules for names by region, culture, or entity type. Unused name pools for NPCs, cities, artifacts | Scaffold — no lore content yet |
+| `Timeline.md` | Chronological event log — eras, dates, pivotal events, cause and effect chains | Partial — 6 eras defined, Treaty of the Dawn documented; event records sparse |
+| `NamingConventions.md` | Phonetic and stylistic rules for names by region, culture, or entity type. Unused name pools for NPCs, cities, artifacts | Partial — primordial entity naming taxonomy fully documented; location and artifact pools sparse |
 | `Relationships.md` | Web of connections between factions, gods, key NPCs, and locations — alliances, enmities, debts, shared histories | Scaffold — no lore content yet |
 
 ### Optional / As-Needed Files
 
 | File | Contents | Status |
 |---|---|---|
-| `NPCs.md` | Named characters — background, role, motivations, relationships, current whereabouts and status | Scaffold — no lore content yet |
-| `Artifacts.md` | Named objects of significance — history, properties, current location, associated lore | Scaffold — no lore content yet |
-| `GameMechanics.md` | Homebrew system rules, mechanical concepts, house rules, balance notes | Scaffold — no lore content yet |
+| `NPCs.md` | Named characters — background, role, motivations, relationships, current whereabouts and status | Partial — 4 NPCs (Rethavyn Cassel, Red Death, Vaseth, Corseth) with full entries |
+| `Artifacts.md` | Named objects of significance — history, properties, current location, associated lore | Partial — 4 artifacts (Voting Coins, Sword of Damocles, Soul Sconce, Vaseth's Treatise) with detailed entries |
+| `GameMechanics.md` | Homebrew system rules, mechanical concepts, house rules, balance notes | Sparse — 3 mechanic concepts defined; all placeholder-level |
 | `RawImports.md` | Holding area for Run import: content that could not be confidently placed elsewhere | Scaffold — no lore content yet |
 
 ---

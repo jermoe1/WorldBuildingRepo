@@ -2,7 +2,7 @@
 
 > Master repository for all lore, worldbuilding content, and session records.
 > This repo is maintained in parallel with a Claude AI worldbuilding project.
-> The Claude project's `WorldBuildingAssistant.md` governs behavior, personas, and commands — it lives in Claude Project Knowledge, not here.
+> `CLAUDE.md` in this repo contains the WorldBuildingAssistant behavior file — personas, commands, and the Auxiliary File Registry.
 > **This repo is the source of truth for all lore content.**
 
 ---
@@ -12,7 +12,8 @@
 ```
 /
 ├── README.md                   ← This file
-├── CHANGELOG.md                ← Session-by-session record of what changed and when
+├── CLAUDE.md                   ← WorldBuildingAssistant behavior file (personas, commands, registry)
+├── CHANGELOG.md                ← Session-by-session record of what changed and when [NOT YET CREATED]
 │
 ├── lore/                       ← All worldbuilding content
 │   ├── core/                   ← Must-have files — establish these first
@@ -33,6 +34,7 @@
 │
 └── sessions/                   ← Full session logs, one file per session
     └── YYYY-MM-DD.md           ← Named by session date
+                                   [sessions/2026-05-07.md not yet exported]
 ```
 
 ---
@@ -66,16 +68,16 @@ Example: `Session 2026-04-26 — Initial scaffold, repo structure established`
 | File | Status | Last Updated |
 |---|---|---|
 | Gods.md | Scaffold only | 2026-04-26 |
-| Geography.md | Scaffold only | 2026-04-26 |
-| Factions.md | Scaffold only | 2026-04-26 |
+| Geography.md | Partial | 2026-05-07 |
+| Factions.md | Partial | 2026-04-26 |
 | MagicSystem.md | Scaffold only | 2026-04-26 |
 | Peoples.md | Scaffold only | 2026-04-26 |
-| Timeline.md | Scaffold only | 2026-04-26 |
-| NamingConventions.md | Scaffold only | 2026-04-26 |
+| Timeline.md | Partial | 2026-04-26 |
+| NamingConventions.md | Partial | 2026-05-07 |
 | Relationships.md | Scaffold only | 2026-04-26 |
-| NPCs.md | Scaffold only | 2026-04-26 |
-| Artifacts.md | Scaffold only | 2026-04-26 |
-| GameMechanics.md | Scaffold only | 2026-04-26 |
+| NPCs.md | Partial | 2026-05-07 |
+| Artifacts.md | Partial | 2026-05-07 |
+| GameMechanics.md | Sparse | 2026-04-26 |
 | RawImports.md | Scaffold only | 2026-04-26 |
 
 > Update this table whenever a file receives substantive content.
@@ -84,11 +86,9 @@ Example: `Session 2026-04-26 — Initial scaffold, repo structure established`
 
 ## Canon Registry
 
-> Mirrors the Canon Registry in WorldBuildingAssistant.md. Update after every session where canon is confirmed.
-
-| # | Confirmed Fact | Session | Date Added |
-|---|---|---|---|
-| — | *(None yet)* | — | — |
+> As of v1.9.0 (2026-05-07), the Canon Registry was extracted from CLAUDE.md into a dedicated `CanonRegistry.md` file maintained in Claude project knowledge. It is no longer mirrored here.
+> Current count: **40 confirmed entries** (as of session 2026-05-07).
+> To review or update canon, use `Run canon:` in a Claude session.
 
 ---
 
