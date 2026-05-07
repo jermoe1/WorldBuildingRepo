@@ -644,6 +644,48 @@ A formal execution site with elaborate ornate carvings that channel rivulets of 
 
 ---
 
+### The Stillpoint
+**Type:** Construct / Research Station / Extraplanar Location
+**Region:** Astral Sea — fixed coordinates, documented in the restricted technical appendix of *Vaseth's Treatise*
+**Nearest Settlement:** N/A *(Astral Sea location — no nearby settlements)*
+**Controlled By / Associated With:** Vaseth *(creator, deceased — currently unaffiliated)*
+
+**Description**
+A sealed chamber of null-mana composite suspended at fixed coordinates in the Astral Sea. Outwardly invisible to mana-sensitive detection — null-mana composite does not react to the surrounding mana field, making the Stillpoint effectively a void in a sea of raw mana. From within, Vaseth observed the Astral Sea through apertures of resonance-glass without contaminating her experiments with her own presence.
+
+The construct is relatively small — a one-person working chamber. It contains the remnants of Vaseth's observation equipment, her convergence array infrastructure (the geometric anchor configurations she used to draw Astral Sea mana inward for controlled experiments), and presumably her working notes from the later phases of her research. Everything is [Unnamed Era] vintage. Null-mana composite has no known decay mechanism; the Stillpoint is presumed structurally intact.
+
+**Significance**
+The site where Vaseth conducted the experiments underpinning *Vaseth's Treatise* — including observation of all three developmental thresholds and the entity division cycle at primordial scale. A research station floating in the Astral Sea, untouched since the [Unnamed Era]. Any scholar who reached it would find equipment and possibly notes not represented in the published Treatise.
+
+**Access — How Vaseth Traveled There**
+Vaseth developed a modified planar transit ritual targeting fixed coordinates in the Astral Sea — a precise, navigated entry rather than general Astral Sea immersion. She used a return tether anchored at her independent laboratory on Emora, allowing reliable extraction. Navigation to the Stillpoint's coordinates required triangulating against stable mana density landmarks in the Astral Sea — a process she spent years refining before the construct was operational.
+
+The full method (transit ritual specifications, coordinate notation, Astral Sea landmark references, and tether anchoring procedure) is documented in the technical appendix of *Vaseth's Treatise*. Most circulating copies of the Treatise do not include this appendix. Confirmed full editions: the Arcane Jewel; Yanuhfroh's interplanar archive district.
+
+**Access — How Someone Else Might Reach It**
+A traveler would need:
+1. The technical appendix of *Vaseth's Treatise* — for coordinates and the transit method
+2. An independent means of Astral Sea transit (the Treaty of the Dawn applies — a mark would be imposed on entry)
+3. The ability to navigate to the specific coordinates, following Vaseth's landmark references
+
+The Astral Sea transit is achievable through various means available to high-tier practitioners; the bottleneck is the technical appendix. Stumbling upon the Stillpoint accidentally is effectively impossible — null-mana composite makes it invisible to mana-sense, and it occupies no distinctive landmark position.
+
+**Dangers**
+The Astral Sea itself is the primary hazard — raw mana at scale, with no fixed geography and significant disorientation risk for unprepared travelers. The Stillpoint's interior is inert. However: the convergence array infrastructure within the construct is capable of drawing large mana concentrations together. If mishandled by someone who did not understand what they were operating, the results could replicate the conditions Corseth accidentally triggered.
+
+**History**
+Constructed during Vaseth's research program ([Unnamed Era]). Used for approximately [unknown duration] of the seventeen-year research period. Abandoned following Corseth's death and Vaseth's publication of *Vaseth's Treatise*. Status since: unknown — no recorded return visit.
+
+**Notes & Open Questions:**
+- ⚠️ Update era references when the [Unnamed Era] receives its in-world name.
+- What exactly do Vaseth's working notes (if recovered) contain that was not published in the Treatise?
+- Is the convergence array infrastructure still functional after [Unnamed Era] years of inactivity?
+- The Aldren Scriptorium declined to fund Vaseth's second Astral Sea expedition — does that institution know the Stillpoint exists?
+- Cross-reference: Canon #39, Artifacts.md (Vaseth's Treatise), NPCs.md (Vaseth, Corseth)
+
+---
+
 ## BODIES OF WATER
 
 > Named seas, oceans, bays, lakes, rivers, and other significant bodies of water.

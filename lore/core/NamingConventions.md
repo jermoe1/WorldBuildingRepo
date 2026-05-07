@@ -55,8 +55,28 @@ Establish naming rules **before** names accumulate. Every name in the Glossary s
 
 > Some things are named by type rather than culture — gods, artifacts, places of power. Document those patterns here.
 
-### Gods
-*(To be filled in — what phonetic or structural pattern do divine names follow?)*
+### Primordial Entities & Gods
+**Cross-reference:** Gods.md (pre-pantheon section) / Canon Registry #34–#37
+**Authority:** *Vaseth's Treatise* — the naming taxonomy devised by Vaseth is the authoritative system for all 28 entities of the primordial lineage (Gen 3 through Gen 5).
+**Phonetic Character:** Readable but weighty — names are scholarly reconstructions intended to feel foundational. Strong consonants, 2–3 syllables. No soft sounds (no *sh*, *wh*; minimal *l* except in compounds). Each name encodes lineage and, for terminal entities, directional expression.
+**Syllable Patterns:** 2–3 syllables. The name's first sound designates its behavioral family.
+**Naming Customs:** Names were coined by Vaseth (and potentially other [Unnamed Era] scholars) based on directly observed behavioral characteristics — not self-given by the entities. They are scholarly reconstructions, not in-world self-identifications.
+
+**System: First-Letter Inheritance**
+The first sound of a parent entity's name is carried by all descendants. Four families:
+- **K family** — Keldris lineage (Piercing / singular penetrating growth)
+- **S family** — Seravel lineage (Coiling / recursive self-referential growth)
+- **A family** — Aldaven lineage (Shell / boundary-forming containing growth)
+- **T family** — Threnkor lineage (Loom / expansive connecting growth)
+
+**System: Terminal-Generation Suffixes**
+Applied only to Gen 5 entities (the final 16). Invented by Vaseth to distinguish the two expressions of each Gen 4 trait:
+- **-eth** — Inward, self-directed expression. *The sound closes.*
+- **-orn** — Outward, expansive expression. *The sound opens.*
+
+**Forbidden Sounds or Structures:** Soft sounds (*sh*, *wh*). Do not apply -eth or -orn suffixes to any pre-Gen 5 entity — these suffixes are exclusive to the terminal generation to prevent confusion.
+**Examples (confirmed):** Gen 3: Keldris, Seravel, Aldaven, Threnkor. Gen 4: Kelrath, Kethran, Serath, Skavren, Avroth, Athryn, Tarenvar, Torrath. Gen 5 pairs: Keleth/Kelorn (Will), Sereth/Serorn (Logic), Avreth/Avrorn (Law), Tareth/Tarorn (Life).
+**Notes:** The alignment between Gen 5 entities and the divine/mythical beings they reformed into after the Collision (Canon #12) has not yet been established. Divine names for the post-Collision pantheon may follow a separate convention to be defined when Gods.md is developed.
 
 ### Artifacts & Named Objects
 *(To be filled in)*

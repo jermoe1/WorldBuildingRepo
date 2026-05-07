@@ -100,6 +100,7 @@ Active during the [Unnamed Era]. Conducted foundational research into the Genesi
 - The Collegium of Primordial Records: does it still exist in some form in the Current Era? If so, where? If not, what happened to it?
 - Whether Rethavyn Cassel was the founder of the Collegium or a later archivist is undefined.
 - Gender/pronouns unspecified — use "they/their" until confirmed.
+- The "unnamed researcher whose dwelling explosion empirically confirmed Cassel Sphere destructiveness" (Canon #7) is now confirmed to be Vaseth — a contemporary experimental mana researcher whose apprentice Corseth caused the Corseth Detonation (Canon #38). The Collegium investigated the aftermath.
 
 ---
 
@@ -147,6 +148,105 @@ Wandering. Unknown destination or purpose.
 - ⚠️ Shares a name with the Poe short story — confirm intentional reference or find a distinct in-world name.
 - Is the life-siphoning ability confirmed, or only rumored in-world?
 - What do they want?
+
+---
+
+---
+
+### Vaseth
+**Also Known As:** *(none recorded — referred to in some texts as "the Primordial Taxonomist" or simply "Vaseth of the Aldren Scriptorium")*
+**Role:** Experimental mana researcher; author of *Vaseth's Treatise*; deviser of the authoritative primordial entity naming taxonomy
+**Status:** Dead *(historical figure — active during the [Unnamed Era])*
+**Location:** *(unknown — her independent laboratory, post-Scriptorium, has not been located)*
+**Faction Affiliation:** Formerly Aldren Scriptorium (departed); subsequently independent
+**Faith:** Unknown
+
+**Appearance**
+*(no physical record preserved)*
+
+**Background**
+A mana researcher of the [Unnamed Era] who specialized in direct experimental observation rather than historical inference. Trained at or affiliated with the Aldren Scriptorium before departing — her own account describes this as a budget dispute over her second Astral Sea expedition. She established an independent research operation and over seventeen years produced the definitive account of primordial mana behavior: *A Treatise on the Behavior of Mana at Scale: Being an Account of Threshold Development, Entity Formation, and the Taxonomy of the Primordial Sixteen* (Vaseth's Treatise).
+
+She constructed the **Stillpoint** — a null-mana composite observation chamber suspended in the Astral Sea — and used convergence arrays to draw sufficient mana together to observe the developmental thresholds and the entity division cycle at scale. Her naming taxonomy (four behavioral families designated K, S, A, T; first-letter inheritance through generations; -eth/-orn directional suffixes for terminal-generation entities) is the standard system for primordial entity nomenclature.
+
+Her apprentice Corseth died in the Astral Sea while conducting unauthorized experiments with Cassel Spheres. Vaseth documented the Corseth Detonation, the phenomenon named after him, and the event provided empirical confirmation of Cassel Sphere collision dynamics later investigated by the Collegium of Primordial Records.
+
+**Personality & Voice**
+Methodical, precise, and sardonic. Her published work is formally rigorous but laced with dry observations about her own experience — she describes leaving the Aldren Scriptorium as "necessary," refers to the Stillpoint's proprietary construction method as "in my technical appendix, and it is proprietary besides," and characterizes Corseth's fatal experiment by noting he "would have been insufferably pleased" about its completeness as data. She distinguishes carefully between observed, tested, inferred, and speculative — and expects others to do the same.
+
+**Motivations**
+- **Wants:** *(historical — mechanistic understanding of mana behavior at every scale)*
+- **Needs:** *(unknown)*
+- **Fears:** *(unknown)*
+
+**Capabilities**
+- Pioneering experimental mana researcher — first to reliably observe all three developmental thresholds and the entity division cycle
+- Designed and constructed the Stillpoint (null-mana composite construction, Astral Sea navigation)
+- Devised convergence arrays capable of accumulating Astral Sea mana to primordial scale
+- Author of the authoritative primordial entity taxonomy
+
+**Relationships**
+- **Corseth** — apprentice; died in the Corseth Detonation
+- **Collegium of Primordial Records** — investigated the Corseth Detonation aftermath; relationship to Rethavyn Cassel and the Collegium is undefined (contemporary scholars in overlapping fields; whether they collaborated or worked independently is unknown)
+
+**History**
+Active during the [Unnamed Era]. Seventeen-year research program culminating in *Vaseth's Treatise*. Corseth's death occurred approximately at the midpoint or end of this period. Her subsequent fate after publishing the Treatise is unknown.
+
+**Current Situation**
+*(Deceased. Legacy survives through Vaseth's Treatise, the Stillpoint (presumed extant in the Astral Sea), and the naming taxonomy used by all subsequent primordial entity scholarship.)*
+
+**Plot Hooks**
+- Recovering a full edition of Vaseth's Treatise (with technical appendix) would reveal the Stillpoint's location and a method for reaching it — a research station floating in the Astral Sea, last touched during the [Unnamed Era].
+- The Stillpoint itself, if located, may contain Vaseth's working notes, incomplete research, and the remnants of her convergence array infrastructure.
+- The relationship between Vaseth and the Collegium of Primordial Records is undefined — did they correspond? Compete? Was Vaseth's work the source the Collegium used to identify Cassel Spheres in the modern era?
+- The Aldren Scriptorium — does it still exist? What do they hold of Vaseth's early work?
+
+**Notes & Open Questions:**
+- ⚠️ Era of activity: [Unnamed Era] — update when that era receives its in-world name.
+- Gender/pronouns: Vaseth is referred to as "she/her" per the researcher session. Confirm as canonical or adjust.
+- Whether Vaseth's private laboratory (post-Scriptorium) has been located or preserved is unknown.
+- Does the Aldren Scriptorium exist in the Current Era? Do they have early Vaseth drafts?
+
+---
+
+### Corseth
+**Also Known As:** *(none — his name survives only through the Corseth Detonation)*
+**Role:** Apprentice researcher; inadvertent cause of the first confirmed Cassel Sphere collision; namesake of the Corseth Detonation
+**Status:** Dead *(killed by the Corseth Detonation during the [Unnamed Era])*
+**Location:** N/A *(no recoverable remains)*
+**Faction Affiliation:** Independent *(associated with Vaseth's research operation)*
+**Faith:** Unknown
+
+**Appearance**
+*(no physical record preserved)*
+
+**Background**
+Apprentice to Vaseth. Joined her research in the fourth year of her seventeen-year program and demonstrated genuine talent — Vaseth credits him with correctly identifying that mana's Second Awakening behavior was intrinsic rather than an artifact of the containment apparatus. He had strong intuitive instincts about mana behavior. He had worse judgment about when those instincts were sufficient preparation for an experiment.
+
+He died during an unauthorized attempt to observe Cassel Sphere collision dynamics in Vaseth's secondary observation construct in the Astral Sea. He had spent several weeks arranging the experiment without her knowledge while she worked in the Stillpoint. The detonation destroyed the construct and left no recoverable remains. Vaseth spent three days mapping the dispersal pattern to reconstruct what had happened.
+
+**Personality & Voice**
+*(as characterized by Vaseth)* Talent matched by overconfidence specifically in the areas he understood well. Patient in general; reckless about experiments he believed he had mastered.
+
+**Motivations**
+*(at time of death)* To accelerate observation of the division threshold by manually introducing two Cassel Spheres into forced proximity — to shorten years of convergence array work into a single controlled experiment.
+
+**Capabilities**
+Strong observational instincts. Instrumental in identifying intrinsic mana behaviors. Contributed meaningfully to early threshold documentation before his death.
+
+**History**
+Active during the [Unnamed Era], working under Vaseth. Died in the Astral Sea during an unauthorized experiment. His death empirically confirmed the destructive nature of Cassel Sphere collisions; the phenomenon is named the **Corseth Detonation** in his memory.
+
+**Current Situation**
+*(Deceased. No remains recovered. Name survives through the Corseth Detonation designation.)*
+
+**Plot Hooks**
+- The Corseth Detonation is the only confirmed data point for Cassel Sphere collision blast radius — what else might be learned from the dispersal pattern Vaseth documented?
+- Was Corseth's experiment entirely unauthorized, or was he acting on a hypothesis Vaseth had dismissed? The nature of their relationship in the final months of his life is undefined.
+
+**Notes & Open Questions:**
+- ⚠️ Era of activity: [Unnamed Era] — update when that era receives its in-world name.
+- Gender/pronouns: referred to as "he/him" per the researcher session. Confirm as canonical or adjust.
 
 ---
 

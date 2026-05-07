@@ -155,5 +155,47 @@ A dark power source with significant moral weight — whoever creates or uses So
 
 ---
 
+---
+
+### Vaseth's Treatise
+**Also Known As:** *The Primordial Treatise*; formally *A Treatise on the Behavior of Mana at Scale: Being an Account of Threshold Development, Entity Formation, and the Taxonomy of the Primordial Sixteen*
+**Type:** Document / Scholarly Treatise
+**Origin:** Authored by Vaseth, [Unnamed Era], following seventeen years of experimental mana research
+**Current Location:** Multiple copies in circulation — confirmed full editions at the Arcane Jewel and Yanuhfroh's interplanar archive district; survival into the Current Era unknown
+**Current Possessor:** Various academic institutions *(full appendix edition: extremely rare)*
+**Status:** Intact — original edition published; copies distributed; technical appendix withheld from most copies
+
+**Description**
+A dense scholarly treatise in multiple volumes. The main body documents Vaseth's observed developmental thresholds (First, Second, and Third Awakening), the Third Awakening structural transformation, the four behavioral families of primordial entities, and the complete 28-entity taxonomy from Gen 3 through Gen 5. Written in a formal but readable scholarly register; Vaseth's dry voice is evident even in technical passages.
+
+The **technical appendix** — not circulated with most copies — contains the coordinates of the Stillpoint in the Astral Sea, Vaseth's modified planar transit ritual, and the Astral Sea navigation method required to reach the construct. Vaseth judged this information too dangerous to distribute openly.
+
+**Properties & Capabilities**
+The main body of the Treatise is a reference work — enormously valuable for any scholar of Genesis Era cosmology or primordial entity research, but not directly capable of producing effects. The technical appendix, by contrast, provides operational information: how to enter the Astral Sea at fixed coordinates, and how to reach the Stillpoint. A reader with the appendix and the necessary magical capability could potentially access a [Unnamed Era] research station in the Astral Sea.
+
+**Cost or Condition**
+No cost to read. Full appendix edition: locating one is the challenge. The information in the appendix is functional — acting on it requires Astral Sea transit capability and the ability to navigate using [Unnamed Era] coordinate notation.
+
+**History**
+Published by Vaseth during the [Unnamed Era] following the completion of her research program. Widely distributed among major academic institutions of the era. The technical appendix was withheld from standard editions; it is unclear how many full editions were ever produced, and whether the appendix survives independently of the main text in any location.
+
+**Myths & Legends**
+In scholarly circles of the Current Era (assuming any copies survive): the Treatise is likely regarded as either a foundational text of primordial cosmology or a historical curiosity of unknown accuracy, depending on how much of the intervening era's scholarship has been preserved. Most scholars would not know the technical appendix exists.
+
+**Why It Matters**
+The Treatise is the primary source for Vaseth's naming taxonomy (now Canon). A scholar with access to a full edition gains: (1) the complete 28-entity taxonomy with behavioral descriptions, (2) a record of the Corseth Detonation, and (3) operational access to the Stillpoint. Any faction that learned the appendix existed and understood its implications would have significant motivation to locate a full copy.
+
+**Factions Seeking It**
+*(Unknown — no Current Era factions are yet established as knowing about or seeking the Treatise. This may change as factions are developed.)*
+
+**Notes & Open Questions:**
+- ⚠️ Update institutional references when the Arcane Jewel and Yanuhfroh are further developed.
+- How many full appendix editions were originally produced?
+- Does the Aldren Scriptorium (Vaseth's former institution) hold any edition?
+- Is the technical appendix ever circulated separately from the main text?
+- Cross-reference: Canon #40, Geography.md (Stillpoint), NPCs.md (Vaseth), In-World Document Registry (CLAUDE.md)
+
+---
+
 *— Artifacts.md — Part of the WorldBuildingAssistant auxiliary file system —*
 *Cross-reference: WorldBuildingAssistant.md § Auxiliary File Registry*

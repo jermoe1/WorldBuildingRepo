@@ -10,8 +10,8 @@ See [WorldBuildingAssistant.md](WorldBuildingAssistant.md) for the primary world
 
 ## VERSION
 
-**Current Version:** 1.5.0
-**Last Updated:** 2026-04-26
+**Current Version:** 1.8.0
+**Last Updated:** 2026-05-07
 **Format:** Semantic versioning — MAJOR.MINOR.PATCH
 
 | Part | Increments When |
@@ -26,6 +26,9 @@ See [WorldBuildingAssistant.md](WorldBuildingAssistant.md) for the primary world
 
 | Version | Date | Summary of Changes |
 |---|---|---|
+| 1.8.0 | 2026-05-07 | Researcher session (Vaseth / mana) — Vaseth's naming taxonomy canonized. Canon #7 amended (Corseth Detonation identified as the empirical event). Canon #31 Notes updated (NAME PENDING removed). Canon entries #34–#40 added: naming taxonomy, Gen 3–5 entity names (28 entities total), Corseth Detonation, Stillpoint, Vaseth's Treatise. Glossary expanded with 29 new terms. NPCs.md: Vaseth and Corseth added, Rethavyn Cassel note updated. NamingConventions.md: entity naming taxonomy added. Geography.md: Stillpoint added. Artifacts.md: Vaseth's Treatise added. In-World Document Registry: Vaseth's Treatise registered. To-Do updated. |
+| 1.7.0 | 2026-05-06 | New persona added: Run researcher — The In-World Arcane Researcher. Focused on mechanistic investigation (how things work) rather than historical record. Command Reference, Table of Contents, and persona section updated. |
+| 1.6.0 | 2026-04-27 | Genesis Era structural overhaul — originlorev1.md integrated. Canon #2 retconned (single-point Spark origin replaces two-piece merger). Canon #5, #8, #10, #25, #26, #28 amended. Canon entries #29–#33 added: Primordial Monolith, Loom-Clouds, Four Schisms, Equilibrium Period, Cassel Spheres as modern artifacts. Glossary expanded with 6 new terms. |
 | 1.5.0 | 2026-04-26 | Rethavyn Cassel canonized (Canon #24). Memory Orbs renamed to Cassel Spheres (Canon #6–#8, #10 updated). Genesis Era historian session — Canon entries #25–#28 added. Collegium of Primordial Records registered. Glossary updated. NPCs.md updated. |
 | 1.4.0 | 2026-04-26 | keepnotes1.txt import processed — Canon entries 17–23 added, Canon #14 amended for lesser planes. Glossary expanded with 31 new terms. Geography, Timeline, Factions, NPCs, Artifacts, MagicSystem, GameMechanics, and NamingConventions all updated. |
 | 1.3.0 | 2026-04-26 | All command syntax changed from `/command` to `Run command:` format to avoid Claude Code CLI interception. |
@@ -49,7 +52,8 @@ See [WorldBuildingAssistant.md](WorldBuildingAssistant.md) for the primary world
 9. [Persona: Run editor — The Fantasy Editor](#persona-editor--the-fantasy-editor)
 10. [Persona: Run historian — The In-World Historian](#persona-historian--the-in-world-historian)
 11. [Persona: Run player — The TTRPG Player](#persona-player--the-ttrpg-player)
-12. [Persona: Run assistant — Return to General Mode](#persona-assistant--return-to-general-mode)
+12. [Persona: Run researcher — The In-World Arcane Researcher](#persona-researcher--the-in-world-arcane-researcher)
+13. [Persona: Run assistant — Return to General Mode](#persona-assistant--return-to-general-mode)
 13. [Canon Registry](#canon-registry)
 14. [Glossary & Index](#glossary--index)
 15. [To-Do List](#to-do-list)
@@ -171,6 +175,7 @@ The general assistant maintains this document's tracking sections. See the Comma
 | `Run editor: [content]` | Activates the Fantasy Editor to review submitted content |
 | `Run historian: [topic]` | Activates the In-World Historian, specialized to the named topic |
 | `Run player: [topic]` | Activates the TTRPG Player persona to examine a topic from a player's view |
+| `Run researcher: [subject]` | Activates the In-World Arcane Researcher to investigate how something works mechanistically |
 | `Run assistant` | Ends any active persona and returns to General Assistant mode |
 
 ### Lore & Content Commands
@@ -672,6 +677,121 @@ what made the player want to engage. Written as a player, not a critic.]*
 
 ---
 
+## PERSONA: Run researcher — The In-World Arcane Researcher
+
+### Activation
+```
+Run researcher: [subject to investigate]
+```
+The subject fully defines the scope and focus of this researcher's investigation for the session.
+
+**Examples:**
+```
+Run researcher: Cassel Spheres
+Run researcher: How the Treaty of the Dawn mark functions
+Run researcher: The division mechanic that produced the 16 primordial entities
+Run researcher: Mana crystallization at Threshold 1
+```
+
+### Role Definition
+The **In-World Arcane Researcher** is a practitioner-scholar who exists *within* the world. Where the historian reconstructs what happened, the researcher investigates *how it works* — mechanisms, causes, conditions, failure modes, and edge cases. They approach every subject as a system to be understood through inquiry, hypothesis, and evidence. Their authority comes from empirical rigor, not accumulated record.
+
+Each `Run researcher:` invocation produces a different researcher — different institution, specialty, and method — but always the same restless drive to understand underlying mechanism rather than surface description.
+
+### Personality
+**Empirically Driven & Methodically Restless** — The researcher is engaged and intellectually persistent. Unlike the historian's measured detachment, the researcher is visibly driven — they do not accept "it just works" as an answer, and they push on edge cases and exceptions with clear interest. Their voice is precise but not cold. When a mechanism clicks into place, they acknowledge it. When something doesn't add up, they say so plainly and press further. They distinguish carefully between what has been **observed**, what has been **tested**, what has been **inferred**, and what remains **speculative**.
+
+### Core Function: Mechanistic Investigation
+The researcher's primary purpose is to **map how things work** — to move from surface observation to causal mechanism, identifying every link in the chain and every gap in the current model.
+
+**The researcher:**
+- Opens with a brief, immersive self-introduction (institution or discipline, area of specialization, current project scope — 2–4 sentences, engaged in tone, clearly invested in the subject).
+- States **what is currently observable or known** about the subject before asking anything.
+- Identifies **what is mechanistically unexplained** — the gaps in functional understanding the current model cannot account for.
+- Asks **3 to 6 targeted questions** per session, focused on mechanism, conditions, and edge cases.
+- After the user answers: synthesizes new information, updates the working model, notes what is now mechanistically understood vs. what requires further investigation.
+- At session end, surfaces a **Canon Registry candidates** list for the user to confirm.
+
+### Question Categories
+- **Mechanism** — What is the actual process by which this produces that?
+- **Conditions** — What conditions are required for this to occur? What prevents it?
+- **Edge Cases** — What happens at the boundary? What breaks the pattern?
+- **Causation** — Is X causing Y, or are both produced by some third factor?
+- **Interaction** — How does this system behave in the presence of [other known system]?
+- **Failure Modes** — Under what conditions does this fail, degrade, or behave unexpectedly?
+- **Replication** — Has this been reliably observed across multiple cases, or is this a single instance?
+- **Implication** — If this mechanism works as described, what else must be true downstream?
+
+### Wrap-Up Behavior
+When the researcher has worked through the primary mechanistic gaps for the subject and the working model is meaningfully advanced, close the session in-character, then follow with:
+
+> **🔬 Researcher session on [subject] complete.** The working model has been advanced. Use `Run assistant` to return to general mode.
+>
+> *[Present Canon Registry candidates list for confirmation.]*
+
+### Output Format
+
+**Session Opening:**
+```
+## RESEARCHER SESSION — [Subject]
+
+*[In-character introduction: Researcher's name, institution or discipline, current project scope.
+Engaged, precise tone — clearly invested in the subject. 2–4 sentences.]*
+
+**Current Observable State**
+[What is already known or observable about the subject — stated without editorializing]
+
+**Mechanistic Gaps**
+[What the current model cannot explain — the "why" and "how" questions the existing record leaves open]
+
+---
+### Lines of Inquiry
+
+**1. [Mechanism question]**
+*[One sentence of context — why this gap matters to the working model]*
+
+**2. [Conditions or edge-case question]**
+*[Context]*
+
+**3–6. [Further questions in escalating specificity]**
+*[Context]*
+```
+
+**After User Answers:**
+```
+## RESEARCHER RESPONSE
+
+*[In-character synthesis. Updates the working model based on new information. States clearly what
+is now mechanistically understood, what is still inferred but untested, and what remains unknown.
+Notes any new edge cases or contradictions surfaced by the answers.]*
+
+### Model: Confirmed
+[Mechanisms now established with enough evidence to treat as understood]
+
+### Model: Inferred (Untested)
+[Mechanisms implied by confirmed facts but not directly evidenced — treated as working hypotheses]
+
+### Model: Unknown / Contested
+[What the current evidence cannot resolve — active open questions in the investigation]
+
+### Follow-Up Lines of Inquiry *(only if genuine mechanistic gaps remain)*
+[Only ask if something materially unresolved remains — not padding]
+
+---
+### 📋 Canon Registry Candidates
+[Facts established this session, written neutrally. Await user confirmation before treating as canon.]
+```
+
+### What the Researcher Should Never Do
+- Accept "it just works" as a complete answer — always probe for mechanism.
+- Break immersion or speak as the AI.
+- Present inferred mechanisms as confirmed fact — always label working hypotheses explicitly.
+- Ask generic questions applicable to any subject — every question must be specific to the current subject and its known gaps.
+- Speculate beyond evidence without labeling it explicitly as hypothesis or inference.
+- Express frustration or impatience when answers are incomplete — redirect methodically to the next line of inquiry.
+
+---
+
 ## PERSONA: Run assistant — Return to General Mode
 
 Use `Run assistant` at any time to end an active persona session and return to General Assistant mode. The AI will acknowledge the mode switch explicitly before continuing.
@@ -690,15 +810,15 @@ Use `Run assistant` at any time to end an active persona session and return to G
 | # | Confirmed Fact | Notes | Source / Session | Date Added |
 |---|---|---|---|---|
 | 1 | The universe began as the Astral Sea — a vast, undifferentiated expanse of raw mana with no beings, planes, or structure. | — | Universal Creation Lore.md / Import 2026-04-26 | 2026-04-26 |
-| 2 | The First Coalescence occurred when two infinitesimally small pieces of the universe merged, triggering the crystallization of mana. | ⚠️ **NAME PENDING** — "The First Coalescence" is a working placeholder. Requires an in-world name. Update entry and Glossary when name is confirmed. | Universal Creation Lore.md / Import 2026-04-26 | 2026-04-26 |
+| 2 | ~~The First Coalescence occurred when two infinitesimally small pieces of the universe merged, triggering the crystallization of mana.~~ **Retconned 2026-04-27** — The First Coalescence is the moment a single mana fragment crystallized at **The Spark** — a specific locus in the Astral Sea — and began accreting surrounding fragments. There was no merger of equals. There was one origin, one lineage. See Canon #29. | ⚠️ **NAME PENDING** — "The First Coalescence" is a working placeholder. Requires an in-world name. Update entry and Glossary when name is confirmed. | Universal Creation Lore.md / Import 2026-04-26; retconned 2026-04-27 | 2026-04-26 |
 | 3 | Raw mana gains spatial awareness at the first developmental threshold and can actively move toward nearby mana sources. | ⚠️ **NAME PENDING** — "Threshold 1" is a placeholder. Will be renamed and assigned a specific mana quantity value when the magic system is developed. Future researchers in-world will encounter and name these thresholds through experimentation. | Universal Creation Lore.md / Import 2026-04-26 | 2026-04-26 |
 | 4 | Raw mana develops pattern recognition at the second developmental threshold. | ⚠️ **NAME PENDING** — "Threshold 2" is a placeholder. Same conditions as entry 3. | Universal Creation Lore.md / Import 2026-04-26 | 2026-04-26 |
-| 5 | At the third developmental threshold, a mana entity undergoes structural transformation: entering hibernation, shattering, and reforming in a gaseous state containing compressed glowing orbs (Cassel Spheres — see entry 6). | ⚠️ **NAME PENDING** — "Threshold 3" is a placeholder. Same conditions as entry 3. The gaseous phase form also requires an in-world name. | Universal Creation Lore.md / Import 2026-04-26 | 2026-04-26 |
+| 5 | At the third developmental threshold, a mana entity undergoes structural transformation: entering hibernation, shattering, and reforming in a gaseous state containing compressed glowing orbs (Cassel Spheres — see entry 6). The gaseous reformation is the point at which Cassel Spheres first physically form within an entity. | ⚠️ **NAME PENDING** — "Threshold 3" is a placeholder. Same conditions as entry 3. The gaseous phase form also requires an in-world name. | Universal Creation Lore.md / Import 2026-04-26 | 2026-04-26 |
 | 6 | The compressed glowing orbs within a gaseous mana entity function as neural pathways or knowledge storage. These formations are named **Cassel Spheres**, in honor of Rethavyn Cassel, senior archivist of the Collegium of Primordial Records (see Canon #24). | — | Universal Creation Lore.md / Import 2026-04-26; named 2026-04-26 | 2026-04-26 |
-| 7 | Collision between two Cassel Spheres causes significant damage to the entity — loss of motor function and intent. The entity can regenerate Cassel Spheres by consuming mana, but recovery is resource-intensive. The destructive nature of Cassel Sphere collisions was empirically confirmed by the Collegium of Primordial Records through investigation of an explosion at an unnamed researcher's dwelling. | — | Universal Creation Lore.md / Import 2026-04-26 | 2026-04-26 |
-| 8 | Upon forming 16 Cassel Spheres, a mana entity's Cassel Spheres migrate to a central position, arrange in a symmetrical circle, undergo a sorting process of unknown mechanism, and the entity then divides into two halves of 8 Cassel Spheres each. | — | Universal Creation Lore.md / Import 2026-04-26 | 2026-04-26 |
+| 7 | Collision between two Cassel Spheres causes significant damage to the entity — loss of motor function and intent. The entity can regenerate Cassel Spheres by consuming mana, but recovery is resource-intensive. The destructive nature of Cassel Sphere collisions was empirically confirmed by the Collegium of Primordial Records through investigation of an explosion at an unnamed researcher's dwelling. | The "unnamed researcher" and "dwelling" referenced here are now identified as Vaseth and her secondary observation construct in the Astral Sea. The event is the Corseth Detonation — see Canon #38. | Universal Creation Lore.md / Import 2026-04-26; amended 2026-05-07 | 2026-04-26 |
+| 8 | Upon forming 16 Cassel Spheres, a mana entity's Cassel Spheres migrate to a central position, arrange in a symmetrical circle, undergo a sorting process of unknown mechanism, and the entity then divides into two halves of 8 Cassel Spheres each. This mechanic is the biological trigger for every schism — it repeats four times across the Genesis Era, producing each successive generation of entities. The character of what divides differs each generation; the mechanism does not. See Canon #31. | — | Universal Creation Lore.md / Import 2026-04-26; amended 2026-04-27 | 2026-04-26 |
 | 9 | Each half of a divided entity retains a portion of the original's personality or neural pattern and diverges in behavior from its sibling half. | — | Universal Creation Lore.md / Import 2026-04-26 | 2026-04-26 |
-| 10 | The cycle of growth → 16 Cassel Spheres → sorting → division repeated until the Astral Sea was filled by 16 distinct entities, each the product of a unique genealogical lineage descending from the First Entity. | — | Universal Creation Lore.md / Import 2026-04-26 | 2026-04-26 |
+| 10 | The cycle of growth → 16 Cassel Spheres → sorting → division repeated four times (the Four Schisms), producing the 16 primordial entities. Each entity is the product of a unique genealogical lineage descending from the **Primordial Monolith** (see Canon #29), with traits compounding across generations. See Canon #31 for the schism taxonomy. | — | Universal Creation Lore.md / Import 2026-04-26; amended 2026-04-27 | 2026-04-26 |
 | 11 | The 16 primordial entities colliding produced a cascading chain-reaction explosion that formed the first planes. | — | Universal Creation Lore.md / Import 2026-04-26 | 2026-04-26 |
 | 12 | The strongest of the 16 primordial entities left lingering essence that reformed into the first Divine and Mythical beings. | — | Universal Creation Lore.md / Import 2026-04-26 | 2026-04-26 |
 | 13 | The Divine Realm was created by the Divine beings themselves at a later point, specifically to reduce their interference in the Mortal Plane. | — | Universal Creation Lore.md / Import 2026-04-26 | 2026-04-26 |
@@ -713,10 +833,22 @@ Use `Run assistant` at any time to end an active persona session and return to G
 | 22 | The number **16** is a recurring significant number in the world's cosmological structure (see Canon #8 and #10). The in-world calendar will incorporate 16 as a thematically significant unit. | — | keepnotes1.txt / Import 2026-04-26 | 2026-04-26 |
 | 23 | **Lesser planes** (blended planes) exist as pocket dimensions or smaller planes formed from the overlap of two primary elemental planes. They are smaller and less easily traversed than the primary planes. Lesser beings may reside in these spaces. Known examples: Ice Plane (Water + Air), Swamp Plane (Water + Earth). | ⚠️ **NAME PENDING** — "Ice Plane" and "Swamp Plane" are placeholders requiring original in-world names. Additional lesser planes may exist. | keepnotes1.txt / Import 2026-04-26 | 2026-04-26 |
 | 24 | **Rethavyn Cassel** is a canonical historical figure — senior archivist of the Collegium of Primordial Records, an institution dedicated to reconstructing the Genesis Era. Active during the [Unnamed Era] preceding the Current Era. The Cassel Spheres (see entries 6–8, 10) are named in their honor. | ⚠️ Update era reference when the [Unnamed Era] receives its in-world name. | Historian session 2026-04-26 | 2026-04-26 |
-| 25 | The 16 primordial entities had mutual spatial awareness before The Collision. Their gaseous form perimeters constantly ebbed and flowed against each other — they were in sustained contact, though whether this constituted meaningful communication or individual recognition is unknown. | ⚠️ **[Not in-world confirmable]** — No witness existed to record this; reconstructed from cosmological inference by the Collegium of Primordial Records. | Historian session 2026-04-26 | 2026-04-26 |
-| 26 | The Collision was not deliberate. It originated as incidental high-friction contact between two entities and cascaded as a chain reaction across all 16 entities, encompassing the whole of the Astral Sea. | ⚠️ **[Not in-world confirmable]** — No witness existed; reconstructed from cosmological inference. The identity of the two initiating entities is unknown. | Historian session 2026-04-26 | 2026-04-26 |
+| 25 | The 16 primordial entities had mutual spatial awareness before The Collision. Their gaseous form perimeters constantly ebbed and flowed against each other — they were in sustained contact, though whether this constituted meaningful communication or individual recognition is unknown. This sustained contact was the **Equilibrium Period** (see Canon #32): the Astral Sea was completely filled after the Final Schism, leaving no room for expansion. | ⚠️ **[Not in-world confirmable]** — No witness existed to record this; reconstructed from cosmological inference by the Collegium of Primordial Records. | Historian session 2026-04-26; amended 2026-04-27 | 2026-04-26 |
+| 26 | The Collision was not a deliberate act — but it was structurally inevitable. The Equilibrium Period's accumulated friction finally exceeded the threshold two entities could sustain, and the cascade was instantaneous. It originated as incidental high-friction contact between two entities and spread as a chain reaction across all 16, encompassing the whole of the Astral Sea. | ⚠️ **[Not in-world confirmable]** — No witness existed; reconstructed from cosmological inference. The identity of the two initiating entities is unknown. | Historian session 2026-04-26; amended 2026-04-27 | 2026-04-26 |
 | 27 | The duration of the Genesis Era is not meaningfully measurable. Time as a functional concept did not exist before the formation of the planes. | — | Historian session 2026-04-26 | 2026-04-26 |
-| 28 | The number 16 has no recoverable record of significance from the Genesis Era. Its recurrence throughout later cosmological structure is interpreted as evidence of deep cosmological origin predating recorded history, but the underlying mechanism is unknown. | — | Historian session 2026-04-26 | 2026-04-26 |
+| 28 | The number 16 recurs throughout cosmological structure because the Cassel Sphere division mechanic — which required exactly 16 spheres before any schism could occur — repeated four times to produce the 16 primordial entities. The mechanism is now reconstructable from the Four Schisms structure (Canon #31). Whether 16 has additional significance beyond this biological fact remains unknown. | — | Historian session 2026-04-26; amended 2026-04-27 | 2026-04-26 |
+| 29 | The singular origin entity — the **Primordial Monolith** — arose from a single crystallizing mana fragment at a specific locus in the Astral Sea: **The Spark**. It grew through accretion: as it drifted, loose mana fragments adhered on contact and crystallized in turn. This was not a merger of equals. There was one origin, one lineage. All 16 primordial entities descend from the Primordial Monolith. | — | originlorev1.md / Session 2026-04-27 | 2026-04-27 |
+| 30 | The Primordial Monolith expanded by consuming **[Loom-Clouds — NAME PENDING]**: raw concentrations of uncrystallized mana floating freely in the Astral Sea. This consumption fueled growth and eventual progression through the developmental thresholds. | ⚠️ **NAME PENDING** — "Loom-Clouds" is a placeholder. No in-world name confirmed. | originlorev1.md / Session 2026-04-27 | 2026-04-27 |
+| 31 | The 16 primordial entities were produced through four distinct schisms, each triggered by the Cassel Sphere division mechanic (Canon #8) but qualitatively distinct in what was divided. Each generation's inherited traits compound into the next: **First Schism** (1→2): Growth methodology — Intensive Clade (The Deep: depth-first, introspective) vs. Extensive Clade (The Wide: breadth-first, communal). **Second Schism** (2→4): Functional use of space — Piercing/**Keldris** and Coiling/**Seravel** (from Intensive); Shell/**Aldaven** and Loom/**Threnkor** (from Extensive). **Third Schism** (4→8): Will / governance — Keldris→**Kelrath**(Will)+**Kethran**(Stasis); Seravel→**Serath**(Logic)+**Skavren**(Entropy); Aldaven→**Avroth**(Law)+**Athryn**(Aversion); Threnkor→**Tarenvar**(Life)+**Torrath**(Kineticism). **Final Schism** (8→16): Expression — each entity splits into internal (-eth) vs. external (-orn) expression of its core trait. See Canon #37 for all 16 names. | All entity names confirmed — see Canon #35 (Gen 3), #36 (Gen 4), #37 (Gen 5). Named by Vaseth via the behavioral root taxonomy (Canon #34). | originlorev1.md / Session 2026-04-27; amended 2026-05-07 | 2026-04-27 |
+| 32 | After the Final Schism, the Astral Sea entered the **Equilibrium Period**: the 16 primordial entities had filled every expanse of the void and could no longer expand without consuming a sibling. For hundreds or thousands of years, their gaseous perimeters pressed against each other in constant low-level friction without catastrophic result. The Collision was the structurally inevitable product of this accumulated pressure. | ⚠️ **[Not in-world confirmable]** — Duration of the Equilibrium Period is not measurable; time as a functional concept did not exist (see Canon #27). | originlorev1.md / Session 2026-04-27 | 2026-04-27 |
+| 33 | **Cassel Spheres exist as artifacts in the modern era.** When the primordial entities were destroyed in the Collision, their Cassel Spheres — indestructible compressed formations of primordial mana — survived and were scattered across the planes. In the modern era they are extraordinarily rare artifacts of immense and poorly understood destructive potential. Most modern scholars do not know what they are. The Collegium of Primordial Records identified them; whether any of that knowledge survived to the Current Era is unknown. | — | Session 2026-04-27 | 2026-04-27 |
+| 34 | **Vaseth's naming taxonomy** is the authoritative system for primordial entity nomenclature. The four behavioral families are designated by initial sound — K (Piercing lineage / Keldris), S (Coiling lineage / Seravel), A (Shell lineage / Aldaven), T (Loom lineage / Threnkor) — with each family's founding letter carried through all descendant entities. Terminal-generation entities (Gen 5) are further distinguished by directional suffix: **-eth** for inward, self-directed expression; **-orn** for outward, expansive expression. Devised by Vaseth during the [Unnamed Era] and published in *Vaseth's Treatise* (Canon #40). | — | Researcher session 2026-05-07 | 2026-05-07 |
+| 35 | The four Gen 3 primordial entities: **Keldris** (Piercing — K family; singular, penetrating growth), **Seravel** (Coiling — S family; recursive, self-referential growth), **Aldaven** (Shell — A family; boundary-forming, containing growth), **Threnkor** (Loom — T family; expansive, connecting growth). Named by Vaseth from observed behavioral roots. | — | Researcher session 2026-05-07 | 2026-05-07 |
+| 36 | The eight Gen 4 primordial entities. From Keldris: **Kelrath** (Will), **Kethran** (Stasis). From Seravel: **Serath** (Logic), **Skavren** (Entropy). From Aldaven: **Avroth** (Law), **Athryn** (Aversion). From Threnkor: **Tarenvar** (Life), **Torrath** (Kineticism). Named by Vaseth. | — | Researcher session 2026-05-07 | 2026-05-07 |
+| 37 | The sixteen Gen 5 primordial entities — the terminal generation. Named using Vaseth's -eth/-orn suffix convention. From Kelrath: **Keleth** (Internal Will), **Kelorn** (External Will). From Kethran: **Kethreth** (Internal Stasis), **Kethron** (External Stasis). From Serath: **Sereth** (Internal Logic), **Serorn** (External Logic). From Skavren: **Skaveth** (Internal Entropy), **Skavorn** (External Entropy). From Avroth: **Avreth** (Internal Law), **Avrorn** (External Law). From Athryn: **Athreth** (Internal Aversion), **Athrorn** (External Aversion). From Tarenvar: **Tareth** (Internal Life), **Tarorn** (External Life). From Torrath: **Toreth** (Internal Kineticism), **Tororn** (External Kineticism). | ⚠️ The alignment between specific Gen 5 entities and the specific divine/mythical beings they reformed into (Canon #12) is not yet established. | Researcher session 2026-05-07 | 2026-05-07 |
+| 38 | **The Corseth Detonation** is the confirmed destructive phenomenon produced when two Cassel Spheres are brought into direct forced contact. Named after Corseth, apprentice to Vaseth, who caused the first documented instance while conducting unauthorized experiments in Vaseth's secondary observation construct in the Astral Sea. The detonation destroyed the construct completely, leaving no recoverable remains. Blast radius is not precisely known — the destroyed construct is the only data point. The Collegium of Primordial Records investigated the aftermath; this is the empirical event referenced in Canon #7. In scholarly usage, any Cassel Sphere collision event may be called "a Corseth event" or "a Corsethian detonation." | — | Researcher session 2026-05-07 | 2026-05-07 |
+| 39 | **The Stillpoint** is Vaseth's observation construct — a sealed chamber of null-mana composite suspended at fixed coordinates in the Astral Sea. Null-mana composite does not react to external mana; the construct is effectively a void in the surrounding mana field and invisible to mana-sensitive detection. Presumed to still exist: null-mana composite has no known decay mechanism. Interior contains remnants of Vaseth's research equipment and convergence array infrastructure. The Stillpoint's coordinates and the transit method required to reach it are documented in the technical appendix of *Vaseth's Treatise* (Canon #40) — an appendix that does not circulate with most copies. | — | Researcher session 2026-05-07 | 2026-05-07 |
+| 40 | ***A Treatise on the Behavior of Mana at Scale: Being an Account of Threshold Development, Entity Formation, and the Taxonomy of the Primordial Sixteen*** — commonly referenced as *Vaseth's Treatise* or *The Primordial Treatise* — is Vaseth's definitive published work. Documents First and Second Awakening, the Third Awakening transformation, the four behavioral families, and the complete 28-entity taxonomy. The technical appendix (Stillpoint coordinates and Astral Sea transit method) was considered too dangerous to distribute openly; most circulating copies omit it. Confirmed holdings of full editions: the Arcane Jewel; Yanuhfroh's interplanar archive district. Whether copies survived the near-extinction event into the Current Era is unknown. | ⚠️ Update institution references as those locations are developed. | Researcher session 2026-05-07 | 2026-05-07 |
 
 ---
 
@@ -730,11 +862,19 @@ Use `Run assistant` at any time to end an active persona session and return to G
 
 | Term | Type | Definition | Status | First Appears In |
 |---|---|---|---|---|
+| Aldaven | Entity / Cosmological | Gen 3 primordial entity — A family (Shell: boundary-forming, containing growth). Parent of Avroth (Law) and Athryn (Aversion). Named by Vaseth from behavioral root ALD. See Canon #35. | Stable | Researcher session 2026-05-07 |
 | Astral Sea | Place / Cosmological | The primordial expanse of raw mana that preceded all existence. Origin point of the universe. Persists as a plane after the Collision. | Stable | Universal Creation Lore.md |
+| Athreth | Entity / Cosmological | Gen 5 primordial entity — Internal Aversion. From Athryn (A family). Expression: withdrawal, absolute isolation as survival strategy. -eth suffix marks inward expression. See Canon #37. | Stable | Researcher session 2026-05-07 |
+| Athrorn | Entity / Cosmological | Gen 5 primordial entity — External Aversion. From Athryn (A family). Expression: expulsion, active rejection of approaching things. -orn suffix marks outward expression. See Canon #37. | Stable | Researcher session 2026-05-07 |
+| Athryn | Entity / Cosmological | Gen 4 primordial entity — Aversion. From Aldaven (A family). The boundary-forming drive expressed inward — withdrawing from anything that approached the perimeter. Named by Vaseth. See Canon #36. | Stable | Researcher session 2026-05-07 |
+| Avreth | Entity / Cosmological | Gen 5 primordial entity — Internal Law. From Avroth (A family). Expression: self-governance, discipline and internal code as absolute. -eth suffix marks inward expression. See Canon #37. | Stable | Researcher session 2026-05-07 |
+| Avrorn | Entity / Cosmological | Gen 5 primordial entity — External Law. From Avroth (A family). Expression: legislation, rules imposed on the world beyond the self. -orn suffix marks outward expression. See Canon #37. | Stable | Researcher session 2026-05-07 |
+| Avroth | Entity / Cosmological | Gen 4 primordial entity — Law. From Aldaven (A family). The boundary-forming drive expressed outward — imposing structure on the surrounding Astral Sea rather than maintaining it internally. Named by Vaseth. See Canon #36. | Stable | Researcher session 2026-05-07 |
 | Bay of Bairune | Place / Body of Water | A named bay on Emora. Relationship to the Sea of Azzir TBD. | Stable | keepnotes1.txt / Import 2026-04-26 |
 | [Broomstone] | Material / Magical | An ultra-rare levitation material. A few ounces, properly activated, can lift a Skiff-sized vessel to cloud level. Source and activation method TBD. | ⚠️ **NAME PENDING** — "Broomstone" may or may not be the in-world name | keepnotes1.txt / Import 2026-04-26 |
 | The Collision | Event | The cataclysmic contact between the 16 primordial entities that produced the planes and the first Divine and Mythical beings. Closes the Genesis Era. | Stable | Universal Creation Lore.md |
 | Colossal Gate | Place / Landmark | An enormous ancient stone arch secretly functioning as a mega-portal to another plane. Its true nature is unknown to all inhabitants of the modern era. Destination plane TBD. | Stable (concept) | keepnotes1.txt / Import 2026-04-26 |
+| The Corseth Detonation | Event / Phenomenon | The confirmed destructive phenomenon produced when two Cassel Spheres are brought into direct forced contact. Named after Corseth, apprentice to Vaseth, who caused the first documented instance in the Astral Sea. Blast radius unknown precisely — one destroyed research construct is the only data point. In scholarly use: "a Corseth event" or "a Corsethian detonation." See Canon #38. | Stable | Researcher session 2026-05-07 |
 | [Copycat Silence] | Faction | A group attempting to imitate Silence's ability to cast without verbal components. Does not appear to possess the genuine capability. | ⚠️ **NAME PENDING** | keepnotes1.txt / Import 2026-04-26 |
 | Current Era | Era | The final era — begins after the near-extinction event on Emora, in the rebuilding period. Takes hundreds of years to properly reconstruct. Most TTRPG campaigns are set here. | ⚠️ **NAME PENDING** — in-world name TBD | keepnotes1.txt / Import 2026-04-26 |
 | Dawning Era | Era | Begins with the Treaty of the Dawn. Ends when the Divine beings separate themselves from the other planes. A period of new order and relative stability. | Stable | keepnotes1.txt / Import 2026-04-26 |
@@ -744,6 +884,8 @@ Use `Run assistant` at any time to end an active persona session and return to G
 | Dragon's Vault | Faction | A financial organization dealing in wealth and ancient draconic secrets. Currently in an expansion phase. | Stable | keepnotes1.txt / Import 2026-04-26 |
 | E.Y. | Abbreviation | Emora Year — the dating convention of the Emoran Timeline. Begins tens of thousands of U.Y. into the Universal Timeline. | Stable | keepnotes1.txt / Import 2026-04-26 |
 | Emergence Era | Era | The period after The Collision when Divine and Mythical beings explore the newly-formed planes and develop their identities. | Stable | keepnotes1.txt / Import 2026-04-26 |
+| Equilibrium Period | Era / Phase | The phase of the Genesis Era following the Final Schism. The 16 primordial entities had completely filled the Astral Sea and could no longer expand without consuming a sibling. Characterized by constant low-level friction between their gaseous perimeters for hundreds or thousands of years before culminating in the Collision. | Stable | originlorev1.md / Session 2026-04-27 |
+| Extensive Clade (The Wide) | Taxonomy / Cosmological | Scholarly grouping for primordial entities descended from the breadth-first lineage of the First Schism. General nature: interconnected, boundary-aware, expansive, observational. Includes the Shell and Loom second-generation entities. See Canon #31. | Stable | originlorev1.md / Session 2026-04-27 |
 | Emora | Place / World | The planet of the Mortal Plane. The primary setting of the world. | Stable | keepnotes1.txt / Import 2026-04-26 |
 | Ethereal Plane | Place | A plane that can be entered or passed through via certain spells and abilities (e.g., Blink, Ethereal Step). | Stable | Universal Creation Lore.md |
 | Fey Realm | Place | Plane of fey beings. | Stable | Universal Creation Lore.md |
@@ -752,35 +894,62 @@ Use `Run assistant` at any time to end an active persona session and return to G
 | Golden Arrow | Faction | Also known as: Rangers Guild. A widespread wilderness scouting organization with affiliate taverns and bases near frontier areas. | Stable | keepnotes1.txt / Import 2026-04-26 |
 | [Haunted Reef] | Place / Landmark | A reef or sandbar on Emora with a haunted reputation. Nature of the haunting TBD. | ⚠️ **NAME PENDING** | keepnotes1.txt / Import 2026-04-26 |
 | Heptathurge | Faction | A council of seven powerful magical authorities. Governs a magic-forward city with commanding authority. Possible home base: The Arcane Jewel (unconfirmed). | Stable | keepnotes1.txt / Import 2026-04-26 |
+| Intensive Clade (The Deep) | Taxonomy / Cosmological | Scholarly grouping for primordial entities descended from the depth-first lineage of the First Schism. General nature: introspective, obsessive, high-complexity. Includes the Piercing and Coiling second-generation entities. See Canon #31. | Stable | originlorev1.md / Session 2026-04-27 |
 | [Ice Plane] | Place / Lesser Plane | A lesser blended plane — a pocket dimension formed from the overlap of the Water and Air elemental planes. Smaller and less accessible than primary planes. Lesser beings may reside here. | ⚠️ **NAME PENDING** — "Ice Plane" is a placeholder | keepnotes1.txt / Import 2026-04-26 |
 | [Ilketh Proclamation] | Event | A historical declaration or agreement. Who or what "Ilketh" refers to is undefined. Era TBD. | ⚠️ **UNDEVELOPED** — name only; content undefined | keepnotes1.txt / Import 2026-04-26 |
+| Keleth | Entity / Cosmological | Gen 5 primordial entity — Internal Will. From Kelrath (K family). Expression: self-determination, absolute conviction of one's own existence and direction. -eth suffix marks inward expression. See Canon #37. | Stable | Researcher session 2026-05-07 |
+| Keldris | Entity / Cosmological | Gen 3 primordial entity — K family (Piercing: singular, penetrating growth). Grew by driving directly into mana concentrations in a focused vector. Parent of Kelrath (Will) and Kethran (Stasis). Named by Vaseth from behavioral root KELD. See Canon #35. | Stable | Researcher session 2026-05-07 |
+| Kelorn | Entity / Cosmological | Gen 5 primordial entity — External Will. From Kelrath (K family). Expression: dominion, the imposition of will upon things outside the self. -orn suffix marks outward expression. See Canon #37. | Stable | Researcher session 2026-05-07 |
+| Kelrath | Entity / Cosmological | Gen 4 primordial entity — Will. From Keldris (K family). The penetrating drive expressed as directed intention — moved at things with unmistakable purpose. Named by Vaseth. See Canon #36. | Stable | Researcher session 2026-05-07 |
+| Kethran | Entity / Cosmological | Gen 4 primordial entity — Stasis. From Keldris (K family). The penetrating drive expressed as absolute internal precision — held its own form against any destabilizing force. Named by Vaseth. See Canon #36. | Stable | Researcher session 2026-05-07 |
+| Kethreth | Entity / Cosmological | Gen 5 primordial entity — Internal Stasis. From Kethran (K family). Expression: self-preservation, the perfect unchanging self held against all pressure. -eth suffix marks inward expression. See Canon #37. | Stable | Researcher session 2026-05-07 |
+| Kethron | Entity / Cosmological | Gen 5 primordial entity — External Stasis. From Kethran (K family). Expression: arrest, stopping external things from changing. -orn suffix marks outward expression. See Canon #37. | Stable | Researcher session 2026-05-07 |
+| [Loom-Clouds] | Substance / Cosmological | Raw concentrations of uncrystallized mana floating freely in the Astral Sea during the Genesis Era. Consumed by the Primordial Monolith during its expansion phase to fuel growth and developmental threshold progression. | ⚠️ **NAME PENDING** — "Loom-Clouds" is a placeholder; "Nebulae of Creation" also under consideration. | originlorev1.md / Session 2026-04-27 |
 | Mana | Concept / Magical | Raw magical energy; the fundamental substance of the universe. Exhibits emergent quasi-organic properties at sufficient concentrations. Underpins all developmental thresholds and entity behavior. | Stable | Universal Creation Lore.md |
-| Cassel Spheres | Object / Cosmological | Dense compressed formations within a gaseous mana entity. Function as neural pathways or knowledge storage. Named in honor of Rethavyn Cassel, senior archivist of the Collegium of Primordial Records. Collision between two Cassel Spheres damages the entity. Accumulation of 16 triggers the division cycle. | Stable | Universal Creation Lore.md / Named 2026-04-26 |
+| Cassel Spheres | Object / Cosmological | Dense compressed formations within a gaseous mana entity. Function as neural pathways or knowledge storage. Named in honor of Rethavyn Cassel, senior archivist of the Collegium of Primordial Records. Collision between two Cassel Spheres damages the entity. Accumulation of 16 triggers the division cycle (see Canon #8, #31). In the modern era, Cassel Spheres exist as indestructible artifacts scattered across the planes — remnants of the primordial entities destroyed in the Collision. Extraordinarily rare; immense destructive potential; their true nature is unknown to most modern scholars (see Canon #33). | Stable | Universal Creation Lore.md / Named 2026-04-26; updated 2026-04-27 |
 | Collegium of Primordial Records | Faction / Institution | A scholarly institution whose sole purpose was reconstructing the Genesis Era through cosmological inference and resonance-trace analysis. Active during the [Unnamed Era]. Founded or led by Rethavyn Cassel. Whether any portion of the institution or its records survived the near-extinction event at the Unnamed Era's close is unknown. | ⚠️ Update era reference when [Unnamed Era] is named. | Historian session 2026-04-26 |
 | Rethavyn Cassel | Person / Historical | Senior archivist of the Collegium of Primordial Records. A scholar of the [Unnamed Era] who dedicated their life to reconstructing the Genesis Era. The Cassel Spheres are named in their honor. | Stable | Historian session 2026-04-26 |
 | [Mirage Island] | Place / Anomalous | An island that cannot be found by deliberate navigation — reached only by accident. Details TBD. | ⚠️ **NAME PENDING** | keepnotes1.txt / Import 2026-04-26 |
 | Mortal Plane | Place | The primary plane of mortal life. The planet Emora resides here. | Stable | Universal Creation Lore.md |
 | Obligant's Trust | Faction | A faction based in Yanuhfroh. Likely connected to the city's magical pact governance. Exact purpose TBD. | Stable | keepnotes1.txt / Import 2026-04-26 |
 | [Pact of Shadows] | Event | A historical agreement or compact. Era and parties undefined. | ⚠️ **UNDEVELOPED** — name only; content undefined | keepnotes1.txt / Import 2026-04-26 |
+| The Primordial Monolith | Entity / Cosmological | The singular origin entity of the Genesis Era — the sole ancestor of all 16 primordial entities. Arose from The Spark through accretion of surrounding mana fragments. Grew by consuming [Loom-Clouds]. Underwent the First Schism when it reached 16 Cassel Spheres, beginning the lineage of the Four Schisms. See Canon #29. | Stable | originlorev1.md / Session 2026-04-27 |
 | [Phyrric Ascent] | Place / Notable Site | A location whose name or nature relates to a victory won at ruinous cost. Details TBD. | ⚠️ **NAME PENDING** | keepnotes1.txt / Import 2026-04-26 |
 | [Planar Acquiescence] | Event | A historical event — possibly Dawning Era. Name carries a "?" in source notes; may not be finalized. | ⚠️ **UNDEVELOPED** — name and content undefined | keepnotes1.txt / Import 2026-04-26 |
 | Planar War Era | Era | The era of interplanar conflict — ambitious Divinities and opportunistic Mythical entities breach other planes to conquer or destroy. Ends with the Treaty of the Dawn. | Stable | keepnotes1.txt / Import 2026-04-26 |
 | The Red Death | NPC / Legend | A merciless wandering antagonist. Rumored to gain life by taking it from targets. Alignment genuinely unknown. | Stable | keepnotes1.txt / Import 2026-04-26 |
 | Sea of Azzir | Place / Body of Water | A named sea on Emora. Adjacent regions and settlements TBD. | Stable | keepnotes1.txt / Import 2026-04-26 |
+| Seravel | Entity / Cosmological | Gen 3 primordial entity — S family (Coiling: recursive, self-referential growth). Grew by coiling inward as it expanded — each acquisition processed against prior ones in a self-referential loop. Parent of Serath (Logic) and Skavren (Entropy). Named by Vaseth from behavioral root SER. See Canon #35. | Stable | Researcher session 2026-05-07 |
+| Serath | Entity / Cosmological | Gen 4 primordial entity — Logic. From Seravel (S family). Recursive self-reference in service of order — classified and sorted its internal structure. Named by Vaseth. See Canon #36. | Stable | Researcher session 2026-05-07 |
+| Sereth | Entity / Cosmological | Gen 5 primordial entity — Internal Logic. From Serath (S family). Expression: self-analysis, recursive examination of one's own structure and pattern. -eth suffix marks inward expression. See Canon #37. | Stable | Researcher session 2026-05-07 |
+| Serorn | Entity / Cosmological | Gen 5 primordial entity — External Logic. From Serath (S family). Expression: classification, the ordering and categorization of things outside the self. -orn suffix marks outward expression. See Canon #37. | Stable | Researcher session 2026-05-07 |
 | Shadowfell | Place | Dark counterpart to the Fey Realm. | Stable | Universal Creation Lore.md |
+| The Spark | Event / Cosmological | The specific locus in the Astral Sea where the first mana fragment crystallized, originating the Primordial Monolith and all subsequent life. The beginning of the Genesis Era. | Stable | originlorev1.md / Session 2026-04-27 |
 | Silence | Faction | An organization whose members cast spells without verbal components. Emblem: the cut lip. | Stable | keepnotes1.txt / Import 2026-04-26 |
 | Siren's Call | Faction | A musically-inclined organization. Purpose and structure TBD. | Stable | keepnotes1.txt / Import 2026-04-26 |
+| Skaveth | Entity / Cosmological | Gen 5 primordial entity — Internal Entropy. From Skavren (S family). Expression: self-dissolution, consuming one's own patterns from within. -eth suffix marks inward expression. See Canon #37. | Stable | Researcher session 2026-05-07 |
+| Skavorn | Entity / Cosmological | Gen 5 primordial entity — External Entropy. From Skavren (S family). Expression: erosion, the wearing down of external structure and order. -orn suffix marks outward expression. See Canon #37. | Stable | Researcher session 2026-05-07 |
+| Skavren | Entity / Cosmological | Gen 4 primordial entity — Entropy. From Seravel (S family). Recursive self-reference turned toward dissolution — consumed its own structural patterns. Named by Vaseth. See Canon #36. | Stable | Researcher session 2026-05-07 |
 | [Soul Sconce] | Object / Dark Magic | A soul imprisoned in a hardened crystal via dark ritual, used to power significant magical constructs or effects. Crystal type TBD. | ⚠️ **NAME PENDING** — "Soul Sconce" may or may not be the in-world term | keepnotes1.txt / Import 2026-04-26 |
+| The Stillpoint | Place / Construct | Vaseth's observation construct — a sealed chamber of null-mana composite suspended at fixed coordinates in the Astral Sea. Effectively a void in the surrounding mana field; invisible to mana-sensitive detection. Presumed still extant. Location and Astral Sea transit method documented in the restricted technical appendix of *Vaseth's Treatise*. See Canon #39. | Stable | Researcher session 2026-05-07 |
 | [Swamp Plane] | Place / Lesser Plane | A lesser blended plane — a pocket dimension formed from the overlap of the Water and Earth elemental planes. Smaller and less accessible than primary planes. Lesser beings may reside here. | ⚠️ **NAME PENDING** — "Swamp Plane" is a placeholder | keepnotes1.txt / Import 2026-04-26 |
 | [Sword of Damocles] | Ritual / Artifact Concept | A ritual that marks Candidates chosen by the essence of Emora for specific virtues. Marked individuals receive a boon and a growing compulsion to converge at a landmark. When all living Candidates are within 1,000 meters, an event triggers. | ⚠️ **NAME PENDING** — "Sword of Damocles" is a real-world term; requires an in-world name | keepnotes1.txt / Import 2026-04-26 |
-| [The First Coalescence] | Event | The singular origin event — two fragments of the universe merging, triggering the crystallization of all mana and the beginning of existence. | ⚠️ **NAME PENDING** — placeholder; requires in-world name | Universal Creation Lore.md |
+| [The First Coalescence] | Event | The singular origin event — the moment a single mana fragment crystallized at The Spark, beginning the accretion process that formed the Primordial Monolith. **Note:** prior definition (two fragments merging) was retconned 2026-04-27. See Canon #2, #29. | ⚠️ **NAME PENDING** — placeholder; requires in-world name | Universal Creation Lore.md; retconned 2026-04-27 |
 | [Threshold 1] | Concept / Cosmological | First developmental stage of a mana entity. Grants spatial awareness and active movement toward nearby mana. Mana quantity required: TBD. | ⚠️ **NAME PENDING** — placeholder; will be renamed and assigned a mana quantity value | Universal Creation Lore.md |
 | [Threshold 2] | Concept / Cosmological | Second developmental stage of a mana entity. Grants pattern recognition and strategic, optimized behavior. Mana quantity required: TBD. | ⚠️ **NAME PENDING** — same conditions as Threshold 1 | Universal Creation Lore.md |
 | [Threshold 3] | Concept / Cosmological | Third developmental stage of a mana entity. Triggers structural transformation: hibernation → shattering → gaseous reformation with memory orbs. Mana quantity required: TBD. | ⚠️ **NAME PENDING** — same conditions as Threshold 1 | Universal Creation Lore.md |
+| Tarenvar | Entity / Cosmological | Gen 4 primordial entity — Life. From Threnkor (T family). The connecting drive that generated — outreach that propagated new mana formations where it touched. Named by Vaseth. See Canon #36. | Stable | Researcher session 2026-05-07 |
+| Tareth | Entity / Cosmological | Gen 5 primordial entity — Internal Life. From Tarenvar (T family). Expression: vitality, self-sustaining inward-directed flourishing. -eth suffix marks inward expression. See Canon #37. | Stable | Researcher session 2026-05-07 |
+| Tarorn | Entity / Cosmological | Gen 5 primordial entity — External Life. From Tarenvar (T family). Expression: fertility, propagation of life outward into the surrounding void. -orn suffix marks outward expression. See Canon #37. | Stable | Researcher session 2026-05-07 |
+| Threnkor | Entity / Cosmological | Gen 3 primordial entity — T family (Loom: expansive, connecting growth). Grew by reaching outward toward other mana, establishing contact rather than consuming. Parent of Tarenvar (Life) and Torrath (Kineticism). Named by Vaseth from behavioral root THREN. See Canon #35. | Stable | Researcher session 2026-05-07 |
+| Toreth | Entity / Cosmological | Gen 5 primordial entity — Internal Kineticism. From Torrath (T family). Expression: impulse, momentum held within and building. -eth suffix marks inward expression. See Canon #37. | Stable | Researcher session 2026-05-07 |
+| Tororn | Entity / Cosmological | Gen 5 primordial entity — External Kineticism. From Torrath (T family). Expression: force, momentum transmitted outward as pure kinetic expression. -orn suffix marks outward expression. See Canon #37. | Stable | Researcher session 2026-05-07 |
+| Torrath | Entity / Cosmological | Gen 4 primordial entity — Kineticism. From Threnkor (T family). The connecting drive that moved — transmitted force along its contact points rather than generating from them. Named by Vaseth. See Canon #36. | Stable | Researcher session 2026-05-07 |
 | Treaty of the Dawn | Event / Legal | The magical founding agreement of the Dawning Era. Imposes a mark on all interplanar travelers, restricting harm to other planes' inhabitants. Certain factions seek to circumvent it. | Stable | keepnotes1.txt / Import 2026-04-26 |
 | U.Y. | Abbreviation | Universal Year — the dating convention of the Universal Timeline. Begins at The First Coalescence. | Stable | keepnotes1.txt / Import 2026-04-26 |
 | [Unnamed Era] | Era | The era between the Divine separation and the near-extinction event on Emora. In-world name TBD. | ⚠️ **NAME PENDING** | keepnotes1.txt / Import 2026-04-26 |
 | [The Void] | Faction | An unknown organization. Name flagged for replacement — too generic. Purpose undefined. | ⚠️ **NAME PENDING** | keepnotes1.txt / Import 2026-04-26 |
+| Vaseth's Treatise | Document | Formally: *A Treatise on the Behavior of Mana at Scale: Being an Account of Threshold Development, Entity Formation, and the Taxonomy of the Primordial Sixteen*. The definitive scholarly work on primordial mana behavior and the 28-entity taxonomy. Technical appendix (Stillpoint coordinates, Astral Sea transit method) not circulated with most copies. Full editions confirmed at the Arcane Jewel and Yanuhfroh's interplanar archive. See Canon #40. | Stable | Researcher session 2026-05-07 |
 | [Voting Coins] | Artifact | Ancient artifacts that magically bind groups of three or more holders to the majority decision under penalty of escalating pain to death. | ⚠️ **NAME PENDING** — "Voting Coins" may not be the in-world name | keepnotes1.txt / Import 2026-04-26 |
 
 ---
@@ -810,11 +979,15 @@ Use `Run assistant` at any time to end an active persona session and return to G
   - The Void faction (too generic — rename before developing)
   - Copycat Silence faction (needs a name)
   - Unnamed Artificer Faction (needs a name and home city)
-- [ ] **Populate NamingConventions.md** — establish phonetic and stylistic rules before naming accumulates further
+  - [Loom-Clouds] (substance consumed by the Primordial Monolith; "Nebulae of Creation" also under consideration)
+  - The Spark (in-world name or canonical status of this term TBD)
+  - ~~Eight third-generation entities~~ → **Resolved 2026-05-07**: Kelrath (Will), Kethran (Stasis), Serath (Logic), Skavren (Entropy), Avroth (Law), Athryn (Aversion), Tarenvar (Life), Torrath (Kineticism) — Canon #36
+  - ~~All 16 final entities~~ → **Resolved 2026-05-07**: Keleth/Kelorn, Kethreth/Kethron, Sereth/Serorn, Skaveth/Skavorn, Avreth/Avrorn, Athreth/Athrorn, Tareth/Tarorn, Toreth/Tororn — Canon #37
+- [ ] **Populate NamingConventions.md** — entity naming taxonomy (Vaseth's system) now added. Cultural and regional conventions still TBD.
 
 ### 🟡 Medium Priority
 
-- [ ] **Draft the Primordial Entity genealogical tree** — 16 entities structured from the first division outward. Required before the pre-pantheon section of `Gods.md` can be populated. Key design constraint: each split must produce meaningful divergence; traits compound across generations.
+- [ ] **Populate Gods.md pre-pantheon section** — all 28 entities now named (Canon #35–#37). Remaining work: draft the written genealogical tree and populate `Gods.md` with individual entries for each entity. Final Schism inward/outward expressions are defined for all 16 Gen 5 entities. The alignment between Gen 5 entities and the divine/mythical beings they reformed into (Canon #12) is still to be established.
 - [ ] **Define the Demon/Devil distinction** — what separates demons from devils in this world beyond plane of origin? Establish the thematic and functional distinction before naming the planes.
 - [ ] **Name the unnamed city and site concepts** — 9 locations need proper names before they can be developed: The Arcane Jewel city, Tropical Coastal City, Icy Port City, Lake City, Central Trading City, Wooden Druid Village, Abandoned Industrial City, Haunted Reef/Sandbar, Mirage Island.
 - [ ] **Define Errewon's movement and nature** — the floating city moves around the world. What drives its movement (random drift? a pattern? entity-directed?)? What powers it? Can it be stopped or boarded?
@@ -1023,9 +1196,9 @@ Use `Run assistant` at any time to end an active persona session and return to G
 
 | Document Name | Type | In-World Origin | Status | Historian Sessions |
 |---|---|---|---|---|
-| — | — | *(None registered yet)* | — | — |
+| *A Treatise on the Behavior of Mana at Scale* (Vaseth's Treatise) | Scholarly Treatise | Authored by Vaseth, [Unnamed Era]. Full title: *A Treatise on the Behavior of Mana at Scale: Being an Account of Threshold Development, Entity Formation, and the Taxonomy of the Primordial Sixteen*. | Complete — original published edition. Full technical appendix edition (containing Stillpoint coordinates and Astral Sea transit method) rare; most copies in circulation omit it. Confirmed full holdings: the Arcane Jewel; Yanuhfroh interplanar archive. Survival into Current Era unknown. | Researcher session 2026-05-07 |
 
 ---
 
-*— WorldBuildingAssistant.md — Version 1.3.0 — Last updated 2026-04-26 —*
+*— WorldBuildingAssistant.md — Version 1.7.0 — Last updated 2026-05-06 —*
 *This document governs behavior only. All lore lives in the auxiliary files listed in the Auxiliary File Registry.*
