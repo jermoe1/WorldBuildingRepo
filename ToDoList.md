@@ -6,7 +6,7 @@
 
 ## 🔴 High Priority
 
-- [ ] **Fill out Project Overview** — world name, themes, scope, tonal rules
+- [x] **Fill out Project Overview** — world name, primary themes, tonal rules, key creative goals, and scope boundaries all complete *(2026-05-13)*
 - [ ] **Resolve all NAME PENDING entries** — the following placeholders are blocking downstream development. Nothing that depends on these terms can be finalized until they have permanent names:
   - The First Coalescence (in-world name for the origin event)
   - Threshold 1, 2, and 3 (renamed + mana quantity values assigned; note: in-world names will emerge from future researcher experimentation)

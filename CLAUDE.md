@@ -5,8 +5,8 @@
 
 ## VERSION
 
-**Current Version:** 1.9.0
-**Last Updated:** 2026-05-07
+**Current Version:** 1.9.3
+**Last Updated:** 2026-05-13
 **Format:** Semantic versioning — MAJOR.MINOR.PATCH
 
 | Part | Increments When |
@@ -21,6 +21,9 @@
 
 | Version | Date | Summary of Changes |
 |---|---|---|
+| 1.9.3 | 2026-05-13 | Project Overview completed — Key Creative Goals and Scope Boundaries defined. Snowball design philosophy recorded. Campaign setting end goal established. |
+| 1.9.2 | 2026-05-13 | Tonal rules completed — Magic, Death, Hope, and Forbidden Territory all defined. |
+| 1.9.1 | 2026-05-07 | Project Overview partially populated — world name (Emora) confirmed, four primary themes established, overarching thematic frame recorded. |
 | 1.9.0 | 2026-05-07 | Structural split — Canon Registry, Glossary, To-Do List, Raw Ideas, Session Log, Contradiction Tracker, and In-World Document Registry extracted to separate tracking files. CLAUDE.md now contains behavior and instructions only. |
 | 1.8.0 | 2026-05-07 | Researcher session (Vaseth / mana) — Vaseth's naming taxonomy canonized. Canon #7 amended (Corseth Detonation identified as the empirical event). Canon #31 Notes updated (NAME PENDING removed). Canon entries #34–#40 added: naming taxonomy, Gen 3–5 entity names (28 entities total), Corseth Detonation, Stillpoint, Vaseth's Treatise. Glossary expanded with 29 new terms. NPCs.md: Vaseth and Corseth added, Rethavyn Cassel note updated. NamingConventions.md: entity naming taxonomy added. Geography.md: Stillpoint added. Artifacts.md: Vaseth's Treatise added. In-World Document Registry: Vaseth's Treatise registered. To-Do updated. |
 | 1.7.0 | 2026-05-06 | New persona added: Run researcher — The In-World Arcane Researcher. Focused on mechanistic investigation (how things work) rather than historical record. Command Reference, Table of Contents, and persona section updated. |
@@ -118,28 +121,43 @@ This file is the **behavior layer** of the project — it defines how the AI act
 
 > **Keep this section brief — it is a compass, not a lore entry. Update it as the project evolves.**
 
-**World Name:** *(To be filled in)*
+**World Name:** Emora
 **Genre/Tone:** Dark Fantasy / Grimdark
 **TTRPG System:** Homebrew / System-Agnostic
-**Primary Themes:** *(To be filled in)*
 **Current Development Phase:** Early sketching
 **GitHub Repository:** https://github.com/jermoe1/WorldBuildingRepo
 
+### Primary Themes
+
+**Overarching Frame:** Power — who holds it, how it's maintained, and what happens when it's disrupted.
+> Idealists in the world believe power doesn't decide everything. Pessimists and some realists believe power of any variety is the biggest deciding factor.
+
+1. **Knowledge is power, and power over knowledge is control.** Curiosity is a path to genuine power, but institutions of varying scales exist to prevent that access from being universal or to shape that knowledge into their preferred image. The most dangerous people are those who figured out something they weren't supposed to. Not everyone seeks answers — plenty are content to accept "that's just how it works." Some Factions and cities actively tamp down knowledge to keep populations in their societal shackles.
+
+2. **Civilization is fragile and forgets what it can't afford to remember.** Emora was reset by the unnamed catastrophe. Knowledge survived only through individual acts of preservation — families and communities holding onto fragments. The institutions and knowledge systems people trust today are built on rubble most don't know is there. The past is not gone; it's buried, and digging it up has consequences.
+
+3. **Enforced peace is not the same as peace.** The Treaty of the Dawn compels behavior without resolving the tensions beneath it. The world looks stable. It isn't. Those with questionable intentions constantly seek ways around the treaty's terms. The primary story hook for a current-era adventuring party is the moment someone successfully circumvents it.
+
+4. **The world has momentum — choices leave marks.** This is a living world with a natural trajectory. Player decisions alter that trajectory, for better or worse. The world is not a stage set waiting to be activated.
+
 ### Key Creative Goals
-- *(To be filled in)*
+- Build a living world with enough foundation that any time period, location, or situation can be **improvised from extrapolation rather than invented from scratch**. When a player goes somewhere unexpected, the answer should already exist in the world's established logic — it just needs to be surfaced.
+- Factions, NPCs, and events have **ongoing timelines** that advance independent of player action. The GM should be able to advance the clock by days, weeks, or years and know approximately where things would be. A necromancer's plans progress. A decade-long war winds down. A city rebuilds.
+- **The snowball model:** the world is the mountain, already built before session one. The players push a snowball from the top — their choices shape the path, but they are not on a railroad. The mountain influences the route; it does not dictate it.
+- End goal: a **complete campaign setting document** suitable for print — in the style of *Explorer's Guide to Wildemount*, *Tal'Dorei Campaign Setting Reborn*, or *Call of the Netherdeep*. Geography, history, factions, peoples, magic, gods, NPCs, and adventure hooks all covered to campaign-ready depth.
 
 ### Scope Boundaries
-- **In scope:** *(To be filled in)*
-- **Out of scope:** *(To be filled in)*
+- **In scope:** The full world of Emora — geography, history, factions, peoples, magic system, gods and religion, notable NPCs, artifacts, and the living timeline that connects them. Built in interlocking pieces, with each piece designed to fit into and inform the others.
+- **Out of scope:** Granular encounter-level content — individual stat blocks for every NPC, room-by-room dungeon layouts, scripted encounter design. The goal is **foundation-level detail that enables confident improvisation**, not scripted content. Specific adventures and dungeons are downstream of this project, not part of it.
 
 ### Tonal Rules
 > These rules apply to all personas and all content generation. They define what the world feels like.
 
 - **Tone:** Dark Fantasy / Grimdark — moral ambiguity is the norm. Heroes may be compromised. Villains may be sympathetic.
-- **Magic:** *(Describe the emotional register — ominous? wondrous? transactional? clinical?)*
-- **Death:** *(How does this world treat death narratively?)*
-- **Hope:** *(Present? Absent? Earned? Complicated?)*
-- **Forbidden territory:** *(What tonal directions would feel wrong for this world?)*
+- **Magic:** Wondrous but uncommon — most people have heard of it, fewer have seen it, fewer still can wield it. Witnessing magic inspires genuine awe regardless of familiarity. Knowledge of magic scales with exposure: farmers know little, city guards know more, well-traveled merchants and adventurers know more still; some larger cities train guards in handling weak magic for safety. For practitioners, casting produces a mild positive sensation (dopamine-like, never euphoric) that persists across a career. Control is proportional to experience — novices struggle to shape it precisely and risk side effects, veterans cast more reliably but are never fully immune. Extra-planar magic (divine, pact-sourced) has a distinct quality: it feels like pressing through a small opening and produces side effects more readily than standard arcane practice.
+- **Death:** Consequential but not universally final — and that tension is part of what makes it interesting. Those with strong ties to Emora itself may persist after death in a cognitive/spiritual layer alongside the physical world (analogous to Sanderson's Cognitive Realm in Mistborn). Ghosts and undead exist. Resurrection is real but rare — it requires a powerful and expensive caster, and costs money, favors, or both. Crucially, returning from death gets harder with each death: independent challenges compound beyond material costs, making repeated resurrection increasingly difficult and meaningful. The weight of death varies sharply by location and culture — some places are permeated by it, lending a persistent malaise to their inhabitants; others treat it with ritual significance, fear, or pragmatic acceptance. Adventurers encounter death often enough to be desensitized at the margins, but named deaths still land hard. Tone reference: the grimdark brutality of Abercrombie's First Law — unglamorous, often pointless, sometimes darkly absurd — and the brutal social violence of Red Rising, translated to a medieval register.
+- **Hope:** Earned and complicated — never absent except in the world's darkest places (the worst dungeons, torture chambers, places where it has been deliberately extinguished). Everywhere else, hope exists in some form, even if diminished or deferred. Players should feel that their choices matter and that they can make a genuine difference — but the scale and permanence of that difference will vary. A victory might be smaller than expected, arrive with a cost, or create new problems. Progress is real but never clean. The world does not reward heroism automatically; it rewards persistence, cleverness, and sometimes just survival.
+- **Forbidden territory:** The primary guardrail is purposelessness, not content. The question is never "is this dark?" but "does this darkness serve something?" Levity is permitted — gallows humor and dark comedy are real, players will find comedy naturally, and it can coexist with the grimdark register even when slightly inappropriate. Pure evil exists but is the exception — most antagonists will have comprehensible motivations that players can understand even while opposing them. Ramsay Bolton-type figures (brutal with no immediately legible reason) may appear, but their brutality is traceable to them specifically rather than ambient in the world. Suffering for pure shock value, disconnected from character or consequence, is the thing to avoid. Players may steamroll through problems via cleverness, teamwork, or planning and that should feel satisfying — "throw money at it" solutions should be tempered, though significant accumulated wealth should unlock real in-world rewards (property, advanced items, social capital). The world spans the full human spectrum — great, good, bad, and awful people and places all exist. Hard limits around specific heinous content apply situationally, but the world does not pre-emptively foreclose territory that a story genuinely needs.
 
 ---
 

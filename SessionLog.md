@@ -6,6 +6,45 @@
 
 ---
 
+### Session — 2026-05-13
+**Focus:** World Identity session — Project Overview fully populated for the first time
+**Personas Used:** General assistant only
+**Auxiliary Files Modified:** CLAUDE.md, ToDoList.md
+
+#### Key Decisions Made
+- World name confirmed as **Emora** (planet name and world name are the same)
+- Four primary themes established: (1) Knowledge is power and power over knowledge is control, (2) Civilization is fragile and forgets what it can't afford to remember, (3) Enforced peace is not the same as peace, (4) The world has momentum — choices leave marks
+- Overarching thematic frame: "Power — who holds it, how it's maintained, and what happens when it's disrupted" — with the in-world caveat that idealists dispute this while pessimists and realists accept it
+- Tonal rule — Magic: wondrous but uncommon; knowledge of it scales with exposure; practitioners feel a mild positive sensation; control is proportional to experience; extra-planar magic feels like pressing through a small opening with higher side effect risk
+- Tonal rule — Death: consequential but not universally final; those tied to Emora may persist in a cognitive/spiritual layer (Mistborn Cognitive Realm analogy); resurrection exists but is rare, expensive, and gets harder with each death (independent challenges compound); weight of death varies sharply by location and culture; tone reference: First Law + Red Rising
+- Tonal rule — Hope: earned and complicated; never fully absent except in the darkest places (dungeons, torture chambers); players should feel they can make a difference, though impact varies in scale and permanence
+- Tonal rule — Forbidden territory: purposelessness is the guardrail, not specific content; levity and gallows humor are permitted; most antagonists have comprehensible motivations; Ramsay Bolton-type pure evil exists but is traceable to specific individuals; money-as-solution should be tempered; the world spans the full human spectrum
+- Design philosophy recorded: **the snowball model** — the world is the mountain, players push the snowball from the top, established lore influences path without dictating it
+- End goal confirmed: a **print-ready campaign setting document** in the style of *Explorer's Guide to Wildemount* or *Tal'Dorei Campaign Setting Reborn*
+- Scope defined: everything in Emora at foundation level; encounter-level scripted content (stat blocks, room layouts, dungeon design) is explicitly out of scope
+
+#### Canon Added
+- None this session — World Identity is meta-design, not in-world canon
+
+#### New Ideas Generated
+- None formally logged
+
+#### Outstanding Questions
+- None — all Project Overview fields are now complete
+
+#### Files Modified This Session
+| File | Change Type | Notes |
+|---|---|---|
+| CLAUDE.md | Updated | v1.9.0 → v1.9.3. Project Overview fully populated: world name, primary themes with overarching frame, key creative goals, scope boundaries, and all four tonal rules. |
+| ToDoList.md | Updated | "Fill out Project Overview" marked complete and moved to Completed section. |
+
+#### Next Steps
+1. **Gods.md pre-pantheon section** — all 28 entities are named and ready; this is the highest-ROI lore session available
+2. **Magic System** — tonal layer is now defined; the mechanical layer (thresholds, traditions, costs, limitations) is the logical next step
+3. **NAME PENDING resolution** — era names, faction names, and unnamed sites are still blocking downstream development
+
+---
+
 ### Session — 2026-05-07
 **Focus:** Structural split of CLAUDE.md — extracted all tracking data into 7 separate files; CLAUDE.md now contains behavior and instructions only
 **Personas Used:** General assistant only
