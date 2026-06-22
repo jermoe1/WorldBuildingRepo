@@ -1,7 +1,8 @@
 # Gods.md
 > Pantheon entries, divine domains, relationships between gods, worship practices, and current status.
-> All entries must be consistent with the Canon Registry in WorldBuildingAssistant.md.
-> Cross-reference: Factions.md (religious factions), Relationships.md (divine relationships), Timeline.md (death/ascension events).
+> Pre-pantheon / primordial entity content lives in foundation/Cosmology.md, not here.
+> All entries must be consistent with CanonRegistry.md.
+> Cross-reference: powers/Factions.md (religious factions), meta/Relationships.md (divine relationships), history/Timeline.md (death/ascension events).
 
 ---
 
@@ -53,5 +54,5 @@ Each god gets its own entry block. Use the template below. When a god is mention
 
 ---
 
-*— Gods.md — Part of the WorldBuildingAssistant auxiliary file system —*
-*Cross-reference: WorldBuildingAssistant.md § Auxiliary File Registry*
+*— powers/Gods.md — Part of the WorldBuildingAssistant auxiliary file system —*
+*Cross-reference: meta/CLAUDE.md § Auxiliary File Registry*
