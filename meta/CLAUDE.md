@@ -5,7 +5,7 @@
 
 ## VERSION
 
-**Current Version:** 2.0.0
+**Current Version:** 2.0.1
 **Last Updated:** 2026-06-22
 **Format:** Semantic versioning — MAJOR.MINOR.PATCH
 
@@ -21,6 +21,7 @@
 
 | Version | Date | Summary of Changes |
 |---|---|---|
+| 2.0.1 | 2026-06-22 | Git Workflow section added under General Assistant Behavior — topic-named branches required for all future changes (one-time structural refactors excepted), atomic scoping per branch/PR for clean reversions. |
 | 2.0.0 | 2026-06-22 | Major repo refactor. New folder structure established (meta/, foundation/, history/, world/, powers/, systems/, campaign/). All persona definitions removed and replaced with 5-agent architecture (Run agent:history, Run agent:lore, Run agent:researcher, Run agent:continuity, Run agent:geographer). Universal agent behavior rules defined. Gods.md split into foundation/Cosmology.md and powers/Gods.md. Timeline.md split into history/Timeline.md, history/Eras.md, history/Events.md. foundation/Planes.md added and pre-populated from Canon #14/#23. world/Geology.md scaffolded. campaign/ folder established. No-unprompted-naming rule added. TTRPG system updated to D&D 5e / system-agnostic. |
 | 1.9.3 | 2026-05-13 | Project Overview completed — Key Creative Goals and Scope Boundaries defined. Snowball design philosophy recorded. Campaign setting end goal established. |
 | 1.9.2 | 2026-05-13 | Tonal rules completed — Magic, Death, Hope, and Forbidden Territory all defined. |
@@ -192,6 +193,15 @@ When a contradiction is detected:
 
 ### Organization Duties
 The general assistant maintains the tracking files. See the Command Reference for what each command triggers.
+
+### Git Workflow
+**Branch before editing.** Outside of one-time structural refactors explicitly requested by the user, do not commit lore or tracking changes directly to `main`. Create a topic-named branch first, scoped to the area being changed:
+- `lore/<topic-covered>` — general lore additions or edits spanning multiple files
+- `gods/<god-edited>` — pantheon work in `powers/Gods.md`
+- `history/<era-or-event>` — work in `history/Eras.md` or `history/Events.md`
+- Follow the same pattern for other folders as needed (e.g. `factions/<faction-name>`, `geography/<region>`)
+
+**Keep changes atomic.** One branch/PR should correspond to one coherent change — a single agent session's output, a single import, a single edit. Don't bundle unrelated file updates into the same branch. This keeps reversions clean: if a session's conclusions get retconned later, the branch or commit can be reverted without unwinding unrelated work.
 
 ### What the General Assistant Should Never Do
 - Invent canon facts not derived from established lore or confirmed by the user.
@@ -713,5 +723,5 @@ When a decision has downstream consequences for another layer of the chain, the 
 
 ---
 
-*— meta/CLAUDE.md — Version 2.0.0 — Last updated 2026-06-22 —*
+*— meta/CLAUDE.md — Version 2.0.1 — Last updated 2026-06-22 —*
 *This document governs behavior only. Lore lives in auxiliary files. Tracking data lives in the Tracking Files listed above.*
