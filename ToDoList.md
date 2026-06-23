@@ -40,7 +40,7 @@
 
 ## 🟢 Low Priority / Someday
 
-- [ ] *(Add tasks here)*
+- [ ] **Confirm `tmp/keepnotes1.txt` and `tmp/originlorev1.md` are fully superseded** — both were the source for prior imports (Canon #17–23, #29–33 / Genesis Era overhaul) but still sit unprocessed in `tmp/` rather than being archived or deleted. Verify no remaining content in either file was missed before clearing them out.
 
 ---
 
