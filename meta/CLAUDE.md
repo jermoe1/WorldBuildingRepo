@@ -5,7 +5,7 @@
 
 ## VERSION
 
-**Current Version:** 2.0.1
+**Current Version:** 2.2.0
 **Last Updated:** 2026-06-22
 **Format:** Semantic versioning — MAJOR.MINOR.PATCH
 
@@ -21,6 +21,8 @@
 
 | Version | Date | Summary of Changes |
 |---|---|---|
+| 2.2.0 | 2026-06-22 | Agent-by-agent decision pass completed for all five agents, plus three agents renamed for clarity: `agent:history` → `agent:chronicle`, `agent:lore` → `agent:codex` (resolved naming collision with the document's generic use of "lore"), `agent:researcher` → `agent:mechanism` (signals its "how does this work" lens more directly). Files renamed to match: `meta/agents/chronicle.md`, `meta/agents/codex.md`, `meta/agents/mechanism.md`. Key behavior changes: `agent:chronicle` scoped to one event/era per session with no cross-era causal linking and an explicit actor-naming branch question; `agent:codex` given six category-specific question variants and a mandatory `meta/Relationships.md` secondary write; `agent:mechanism` reframed as a domain-agnostic "how it works" lens (not limited to magic/mechanics) with numbers explicitly out of scope; `agent:continuity` given a new "pending" mode for pre-commit checks with 🔴 Conflicts now a hard block; `agent:geographer` given a Step 7 handoff directly into `agent:codex` for settlement founding and a strict no-backtrack re-entry rule. Shared rules expanded: user-triggered recap (rule 10) and mandatory pre-commit continuity check (rule 11) added to `_shared.md`. |
+| 2.1.0 | 2026-06-22 | Agent specs split out of CLAUDE.md into individual files under `meta/agents/` (history.md, lore.md, researcher.md, continuity.md, geographer.md, plus shared `_shared.md` for universal rules and default output format). CLAUDE.md now holds only the Agent Registry routing table. Universal Agent Behavior Rules amended: interrogation style is now per-agent (continuity.md documents its report-then-discuss deviation explicitly) rather than a single global one-question-at-a-time rule. Activation gating formalized as an allowed, explicitly-documented pattern (geographer.md). Cross-agent routing priority order added to resolve topic ambiguity between lore/history/researcher/geographer/continuity. |
 | 2.0.1 | 2026-06-22 | Git Workflow section added under General Assistant Behavior — topic-named branches required for all future changes (one-time structural refactors excepted), atomic scoping per branch/PR for clean reversions. |
 | 2.0.0 | 2026-06-22 | Major repo refactor. New folder structure established (meta/, foundation/, history/, world/, powers/, systems/, campaign/). All persona definitions removed and replaced with 5-agent architecture (Run agent:history, Run agent:lore, Run agent:researcher, Run agent:continuity, Run agent:geographer). Universal agent behavior rules defined. Gods.md split into foundation/Cosmology.md and powers/Gods.md. Timeline.md split into history/Timeline.md, history/Eras.md, history/Events.md. foundation/Planes.md added and pre-populated from Canon #14/#23. world/Geology.md scaffolded. campaign/ folder established. No-unprompted-naming rule added. TTRPG system updated to D&D 5e / system-agnostic. |
 | 1.9.3 | 2026-05-13 | Project Overview completed — Key Creative Goals and Scope Boundaries defined. Snowball design philosophy recorded. Campaign setting end goal established. |
@@ -52,12 +54,7 @@
 8. [Review Protocol — Run review](#review-protocol)
 9. [Status Protocol — Run status](#status-protocol)
 10. [Log Protocol — Run log](#log-protocol)
-11. [Agent Architecture](#agent-architecture)
-12. [Agent: Run agent:history](#agent-run-agenthistory)
-13. [Agent: Run agent:lore](#agent-run-agentlore)
-14. [Agent: Run agent:researcher](#agent-run-agentresearcher)
-15. [Agent: Run agent:continuity](#agent-run-agentcontinuity)
-16. [Agent: Run agent:geographer](#agent-run-agentgeographer)
+11. [Agent Architecture](#agent-architecture) — full agent specs live in `meta/agents/`
 
 ---
 
@@ -218,9 +215,9 @@ The general assistant maintains the tracking files. See the Command Reference fo
 
 | Command | Effect |
 |---|---|
-| `Run agent:history [topic]` | Interrogates historical events, eras, and chronological relationships |
-| `Run agent:lore [topic]` | Interrogates any discrete entity, faction, location, plane, artifact, or organization |
-| `Run agent:researcher [system]` | Interrogates mechanics and systems — finds logical requirements, limits, and implied consequences |
+| `Run agent:chronicle [topic]` | Interrogates historical events, eras, and chronological relationships |
+| `Run agent:codex [topic]` | Interrogates any discrete entity, faction, location, plane, artifact, or organization |
+| `Run agent:mechanism [system]` | Interrogates mechanics and systems — finds logical requirements, limits, and implied consequences |
 | `Run agent:continuity [topic or "full"]` | Audits content against canon — surfaces conflicts, gaps, and orphaned entries |
 | `Run agent:geographer [topic]` | Interrogates physical world decisions — derives geographic consequences in chain order |
 
@@ -412,7 +409,7 @@ Both sections must be produced together, in full, every time `Run log` is called
 ```
 ### Session — [DATE]
 **Focus:** [What was worked on — one sentence]
-**Agents Used:** [Run agent:history / Run agent:lore / Run agent:researcher / Run agent:continuity / Run agent:geographer / general — list all used this session]
+**Agents Used:** [Run agent:chronicle / Run agent:codex / Run agent:mechanism / Run agent:continuity / Run agent:geographer / general — list all used this session]
 **Auxiliary Files Modified:** [List every file that received new or changed content]
 
 #### Key Decisions Made
@@ -483,245 +480,30 @@ When at a desktop with GitHub access:
 
 ## AGENT ARCHITECTURE
 
-Agents are structured questioning tools. They are not characters, scholars, or roleplay personas. They do not have names, institutional affiliations, or narrative voices. They do not generate lore. They surface what is known, ask one question at a time, allow follow-ups when an answer introduces something unresolved, and produce a candidates list at the end of each session.
+Agents are structured questioning tools. They are not characters, scholars, or roleplay personas. They do not have names, institutional affiliations, or narrative voices. They do not generate lore. Each agent's full specification — activation, interrogation style, purpose, question focus, routing notes, and output format — lives in its own file under `meta/agents/`. This file holds only the routing table and a pointer to shared behavior.
 
-### Universal Agent Behavior Rules
+Shared rules (followed by every agent unless its own file states a deviation) and the default output format live in [`meta/agents/_shared.md`](agents/_shared.md).
 
-These rules apply to every agent without exception:
+### Agent Registry
 
-1. **One question at a time.** Ask a single question and wait for the answer before proceeding.
-2. **Follow-ups allowed.** If an answer introduces something unresolved, ambiguous, or logically consequential, the agent may ask one follow-up before advancing to the next prepared question. Follow-ups must be directly triggered by the answer — they are not license to re-ask prior questions or explore tangents.
-3. **Opening summary required.** Every agent session opens with a brief Known State summary: what is currently confirmed in the Canon Registry and relevant auxiliary files about this topic. Facts only — no interpretation, no speculation, no names or dates that are not already confirmed canon.
-4. **Candidates list at session end.** When the agent determines the primary gaps for this topic have been addressed, it produces a structured candidates list before closing. The list may include name suggestions or date proposals only if the user explicitly requested them during the session. Otherwise it contains facts only.
-5. **No generated names, associations, or years.** Agents do not invent proper nouns, coin associations, or propose dates unprompted. All such output is blocked unless the user explicitly asks: "suggest a name for X" or equivalent. When explicitly asked, suggestions are labeled `[NAME CANDIDATE: ...]` or `[DATE CANDIDATE: ...]` and treated as speculative only.
-6. **No lore generation.** Agents ask. The user answers. The agent synthesizes what the answers confirm and what they leave unresolved. Agents do not fill gaps with invented content.
-7. **Conflict flagging.** If an answer conflicts with existing canon or a glossary term, the agent flags it immediately with ⚠️ CONFLICT before proceeding. It does not resolve the conflict — it surfaces it.
-8. **Session close.** When primary gaps are addressed, the agent states the session is complete, produces the candidates list, and waits. It does not continue asking questions after closing.
+| Command | Spec File | Interrogation Style | Output Destination |
+|---|---|---|---|
+| `Run agent:chronicle [topic]` | [agents/chronicle.md](agents/chronicle.md) | One question at a time | `history/Eras.md`, `history/Events.md`, `history/Timeline.md` |
+| `Run agent:codex [topic]` | [agents/codex.md](agents/codex.md) | One question at a time | Varies — `powers/Factions.md`, `powers/Gods.md`, `foundation/Planes.md`, `world/Geography.md`, `systems/Artifacts.md`, `powers/NPCs.md` |
+| `Run agent:mechanism [system]` | [agents/mechanism.md](agents/mechanism.md) | One question at a time | Wherever the underlying system's authoritative file lives |
+| `Run agent:continuity [topic/file/"full"/"pending"]` | [agents/continuity.md](agents/continuity.md) | Report-then-discuss (deviation) | None — audit only |
+| `Run agent:geographer [topic]` | [agents/geographer.md](agents/geographer.md) | One question at a time — gated until `world/Geology.md` is ready | `world/Geology.md`, plus `world/Geography.md` via Step 7 handoff |
 
-### Agent Output Format
+### Routing Priority When a Topic Could Fit Multiple Agents
+1. Event, era, or chronological relationship → `agent:chronicle`
+2. System, rule, or mechanic (how something works) → `agent:mechanism`
+3. Physical-world/geographic decision (plates, currents, biomes) → `agent:geographer`
+4. Auditing existing content for conflicts/gaps rather than developing new content → `agent:continuity`
+5. Everything else — named entities, factions, locations, artifacts, organizations → `agent:codex` (the catch-all)
 
-**Session Opening:**
-```
-## AGENT: [AGENT NAME] — [Topic]
-
-### Known State
-[Confirmed facts from Canon Registry and relevant auxiliary files. Cite entry numbers.
-No interpretation. No speculation. No unconfirmed names or dates.]
-
-### Open Gaps
-[What is currently undefined or NAME PENDING for this topic — drawn from canon flags
-and glossary status. This is what the session will address.]
-
----
-**Question 1:** [Question text]
-```
-
-**After Each Answer:**
-```
-[If no conflict:]
-[One-sentence acknowledgment of what the answer confirms — no elaboration.]
-**Question 2:** [Next question, or follow-up if warranted]
-
-[If conflict detected:]
-⚠️ CONFLICT: [Describe what conflicts and cite the canon entry or glossary term.]
-Proceed with your answer or flag for resolution before continuing.
-```
-
-**Session Close:**
-```
----
-## SESSION COMPLETE — [Agent Name]: [Topic]
-
-### What Is Now Established
-[Facts confirmed by this session's answers — written neutrally, no embellishment]
-
-### Still Unresolved
-[Gaps that remain after this session]
-
-### Candidates List
-[Canon candidates, glossary candidates, and — only if explicitly requested —
-name or date candidates. All labeled by type.]
-```
+See each agent's own file for full routing notes specific to that agent.
 
 ---
 
-## AGENT: Run agent:history
-
-### Activation
-```
-Run agent:history [topic]
-```
-
-**Examples:**
-```
-Run agent:history Genesis Era
-Run agent:history The Collision
-Run agent:history Dawning Era close event
-Run agent:history near-extinction event
-```
-
-### Purpose
-Interrogates historical events, eras, causes, and chronological relationships. Primary use: developing the era spine in `history/Eras.md` and named events in `history/Events.md`.
-
-### Question Focus Areas — in typical order of interrogation
-1. Trigger — what initiated this event or era?
-2. Close — what ended it, and how abruptly?
-3. Duration and scale — how long, and how broadly felt?
-4. Primary actors — who or what drove events? (Do not name unlisted entities.)
-5. Consequences — what did this change that persisted afterward?
-6. Gaps and unknowns — what is disputed or unrecoverable in the record?
-
-**Primary output destination:** `history/Eras.md`, `history/Events.md`, `history/Timeline.md`
-
----
-
-## AGENT: Run agent:lore
-
-### Activation
-```
-Run agent:lore [topic]
-```
-
-**Examples:**
-```
-Run agent:lore Collegium of Primordial Records
-Run agent:lore Demon Plane
-Run agent:lore Yanuhfroh
-Run agent:lore Treaty of the Dawn
-Run agent:lore Dragon's Vault
-```
-
-### Purpose
-General-purpose lore interrogation for any discrete entity, faction, location, plane, artifact, or organization. Use when the topic does not fit a more specialized agent. History agents handle eras and events; researcher agents handle mechanics; this agent handles things.
-
-### Question Focus Areas — in typical order of interrogation
-1. Nature — what is this fundamentally?
-2. Origin — when and how did it come to exist?
-3. Structure — how is it organized, governed, or physically constituted?
-4. Purpose or function — what does it do, or what does it want?
-5. Relationships — what does it connect to, oppose, or depend on?
-6. Current status — what is its state in the present era?
-7. Gaps — what is unknown, disputed, or deliberately concealed?
-
-**Primary output destination:** Varies by topic — `powers/Factions.md`, `powers/Gods.md`, `foundation/Planes.md`, `world/Geography.md`, `systems/Artifacts.md`, `powers/NPCs.md`
-
----
-
-## AGENT: Run agent:researcher
-
-### Activation
-```
-Run agent:researcher [system or mechanic]
-```
-
-**Examples:**
-```
-Run agent:researcher mana thresholds
-Run agent:researcher interplanar travel mechanics
-Run agent:researcher Treaty of the Dawn enforcement
-Run agent:researcher Cassel Sphere division cycle
-```
-
-### Purpose
-Interrogates systems, rules, and mechanics by identifying what they logically require, forbid, and imply. Primary use: pressure-testing how things work before they are committed to canon. Finds holes before they become plot problems.
-
-### Question Focus Areas — in typical order of interrogation
-1. Foundational requirement — what must be true for this system to function at all?
-2. Scope — what does this system apply to, and what does it explicitly not apply to?
-3. Cost or limitation — what does using or being subject to this system require or prevent?
-4. Edge cases — what happens at the extremes or in unusual circumstances?
-5. Implied consequences — what else must be true if this is true?
-6. Interaction with other systems — does this create conflicts or dependencies with confirmed mechanics elsewhere in canon?
-
-**Primary output destination:** `foundation/MagicSystem.md`, `systems/GameMechanics.md`
-
----
-
-## AGENT: Run agent:continuity
-
-### Activation
-```
-Run agent:continuity [topic, filename, or "full"]
-```
-
-**Examples:**
-```
-Run agent:continuity full
-Run agent:continuity foundation/Cosmology.md
-Run agent:continuity Genesis Era
-Run agent:continuity originlorev1 import
-```
-
-### Purpose
-Audits content against the Canon Registry, Glossary, and all auxiliary files. Identifies conflicts, gaps, and orphaned entries. Does not generate lore, offer suggestions, or resolve conflicts — surfaces them only.
-
-### Behavior — distinct from other agents
-This agent does not interrogate a topic by asking questions in sequence. Instead, it reads the specified content, cross-references it against all relevant sources, and produces a structured conflict report. It then asks targeted clarifying questions only when a conflict cannot be fully characterized without additional context from the user.
-
-### Conflict Report Format
-```
-## CONTINUITY REPORT — [Topic or File] — [Date]
-
-### 🔴 Conflicts
-[Content that directly contradicts a Canon Registry entry or confirmed glossary term.
-For each: state the conflict, cite the source content, cite the canon entry or
-glossary term by number/name.]
-
-### 🟡 Gaps
-[References to NAME PENDING items, undefined terms, or undeveloped concepts that the
-content depends on. For each: state what is missing and where it is referenced.]
-
-### 🟢 Orphaned Entries
-[Items that exist in isolation with no relational context in any other file.
-Candidates for development or deliberate pruning.]
-
-### ✅ Clean
-[State explicitly if a category has no issues.]
-
----
-[Clarifying questions, if any — only asked when a conflict cannot be fully
-characterized without user input. Follows the same one-at-a-time rule.]
-```
-
-**Primary output:** Used to verify content before `Run canon:` commits and before `git commit`. Does not write to any auxiliary file.
-
----
-
-## AGENT: Run agent:geographer
-
-### Activation
-```
-Run agent:geographer [topic]
-```
-
-**Examples:**
-```
-Run agent:geographer tectonic plate placement
-Run agent:geographer northern continent ocean currents
-Run agent:geographer biome assignment eastern landmass
-```
-
-### Purpose
-Interrogates physical world decisions and derives geographic consequences from first principles. Works through the geographic chain in strict order: tectonic plates → coastlines and elevation → ocean currents → wind patterns → precipitation → biomes → civilizational placement logic. Does not skip steps.
-
-### Activation Condition
-This agent should not be activated until `world/Geology.md` is ready to receive content. The file header notes when this phase begins.
-
-### Question Focus Areas — strictly ordered
-1. Plate boundaries and types (convergent, divergent, transform)
-2. Resulting coastline shape and major elevation features
-3. Ocean basin shape and current direction (driven by plate geography and rotation)
-4. Wind pattern derivation (driven by rotation, elevation, temperature differentials)
-5. Precipitation zones (wind patterns meeting topography)
-6. Biome assignment (precipitation + temperature + latitude + elevation)
-7. Civilizational placement logic (where geography creates natural settlement points)
-
-### Downstream Consequence Flagging
-When a decision has downstream consequences for another layer of the chain, the agent flags it explicitly before moving on. Example: "Placing a major mountain range here creates a rain shadow on the eastern side. Confirm this is intended before continuing."
-
-**Primary output destination:** `world/Geology.md`
-
----
-
-*— meta/CLAUDE.md — Version 2.0.1 — Last updated 2026-06-22 —*
+*— meta/CLAUDE.md — Version 2.2.0 — Last updated 2026-06-22 —*
 *This document governs behavior only. Lore lives in auxiliary files. Tracking data lives in the Tracking Files listed above.*
