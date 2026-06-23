@@ -5,7 +5,7 @@
 
 ## VERSION
 
-**Current Version:** 2.2.0
+**Current Version:** 2.3.0
 **Last Updated:** 2026-06-22
 **Format:** Semantic versioning — MAJOR.MINOR.PATCH
 
@@ -21,6 +21,7 @@
 
 | Version | Date | Summary of Changes |
 |---|---|---|
+| 2.3.0 | 2026-06-22 | **CLAUDE.md moved from `meta/CLAUDE.md` to repo root** so Claude Code auto-loads it at the start of every session instead of relying on it being manually read. `meta/` now holds only agent specs and naming/relationship reference files. `.claude/skills/`, `.claude/commands/`, `.claude/agents/` scaffolded for future Claude Code harness integrations. `Run develop:` command added — orchestrates a sequenced multi-agent interrogation pass over a single raw idea, ending in a unified candidates list and a mandatory pre-commit continuity check before anything is written. This is a command, not a 6th agent: it calls existing agents in sequence rather than asking its own questions. Documented in the new Develop Protocol section. `RawIdeas.md` and `meta/RawImports.md` headers clarified to state their distinct boundary (raw creative concept with no source import, vs. import content that failed classification). |
 | 2.2.0 | 2026-06-22 | Agent-by-agent decision pass completed for all five agents, plus three agents renamed for clarity: `agent:history` → `agent:chronicle`, `agent:lore` → `agent:codex` (resolved naming collision with the document's generic use of "lore"), `agent:researcher` → `agent:mechanism` (signals its "how does this work" lens more directly). Files renamed to match: `meta/agents/chronicle.md`, `meta/agents/codex.md`, `meta/agents/mechanism.md`. Key behavior changes: `agent:chronicle` scoped to one event/era per session with no cross-era causal linking and an explicit actor-naming branch question; `agent:codex` given six category-specific question variants and a mandatory `meta/Relationships.md` secondary write; `agent:mechanism` reframed as a domain-agnostic "how it works" lens (not limited to magic/mechanics) with numbers explicitly out of scope; `agent:continuity` given a new "pending" mode for pre-commit checks with 🔴 Conflicts now a hard block; `agent:geographer` given a Step 7 handoff directly into `agent:codex` for settlement founding and a strict no-backtrack re-entry rule. Shared rules expanded: user-triggered recap (rule 10) and mandatory pre-commit continuity check (rule 11) added to `_shared.md`. |
 | 2.1.0 | 2026-06-22 | Agent specs split out of CLAUDE.md into individual files under `meta/agents/` (history.md, lore.md, researcher.md, continuity.md, geographer.md, plus shared `_shared.md` for universal rules and default output format). CLAUDE.md now holds only the Agent Registry routing table. Universal Agent Behavior Rules amended: interrogation style is now per-agent (continuity.md documents its report-then-discuss deviation explicitly) rather than a single global one-question-at-a-time rule. Activation gating formalized as an allowed, explicitly-documented pattern (geographer.md). Cross-agent routing priority order added to resolve topic ambiguity between lore/history/researcher/geographer/continuity. |
 | 2.0.1 | 2026-06-22 | Git Workflow section added under General Assistant Behavior — topic-named branches required for all future changes (one-time structural refactors excepted), atomic scoping per branch/PR for clean reversions. |
@@ -54,7 +55,8 @@
 8. [Review Protocol — Run review](#review-protocol)
 9. [Status Protocol — Run status](#status-protocol)
 10. [Log Protocol — Run log](#log-protocol)
-11. [Agent Architecture](#agent-architecture) — full agent specs live in `meta/agents/`
+11. [Develop Protocol — Run develop:](#develop-protocol)
+12. [Agent Architecture](#agent-architecture) — full agent specs live in `meta/agents/`
 
 ---
 
@@ -231,6 +233,7 @@ The general assistant maintains the tracking files. See the Command Reference fo
 | `Run lore: [filename]` | Prompts a review or update of a specific auxiliary lore file |
 | `Run glossary: [term]` | Adds or looks up a term in `Glossary.md` |
 | `Run doc: [name]` | Registers or references an in-world document in `InWorldDocuments.md` |
+| `Run develop: [idea]` | Runs a sequenced multi-agent interrogation pass over a single raw idea — see [Develop Protocol](#develop-protocol) |
 
 ### Tracking & Housekeeping Commands
 
@@ -478,21 +481,88 @@ When at a desktop with GitHub access:
 
 ---
 
+## DEVELOP PROTOCOL
+
+### Triggering Command
+```
+Run develop: [raw idea, or a pointer to an existing RawIdeas.md entry]
+```
+
+### Purpose
+Takes one raw, undeveloped idea and runs it through the existing agent architecture in sequence, producing a single coherent development pass instead of leaving the idea to be manually routed to agents one at a time. `Run develop:` is a **command, not an agent** — it does not ask its own questions. It classifies, sequences, and hands off to the existing agents, each of which interrogates the idea strictly through its own lens, in its own file's interrogation style.
+
+### Procedure
+
+**Step 1 — Capture.**
+If the idea is not already logged in `RawIdeas.md`, log it there first (same effect as `Run idea:`). Every idea developed this way has a permanent record of its starting point.
+
+**Step 2 — Classify.**
+Identify every agent lens the idea touches, using the Routing Priority order in [Agent Architecture](#agent-architecture). Most ideas touch more than one agent — e.g. a faction idea that implies an unexplained ritual touches both `agent:codex` (the faction itself) and `agent:mechanism` (how the ritual works).
+
+**Step 3 — Sequence.**
+State the chosen agent order before starting, and hold to it. Order by dependency, not by registry order: run whichever agent resolves the most foundational unknown first, since later agents' questions may depend on earlier answers (e.g. `agent:mechanism` before `agent:codex` if the entity's nature depends on how its underlying system works; `agent:chronicle` before `agent:codex` if the entity's existence depends on a causal historical event). If two lenses are independent of each other, sequence is arbitrary but must still be stated.
+
+**Step 4 — Run each agent session in turn.**
+Each agent runs its full session exactly as specified in its own file under `meta/agents/` — same interrogation style, same opening Known State summary, same close-out. `Run develop:` does not abbreviate or merge agent sessions; it only chains them. Move to the next agent in the sequence only after the current one reaches its own session close.
+
+**Step 5 — Pre-commit continuity check.**
+Before any of the sequence's output is written to an auxiliary file or `Run canon:`'d, run `agent:continuity` in "pending" mode against the combined output of all sessions in the sequence (per `_shared.md` rule 11). A 🔴 Conflict is a hard block until resolved or explicitly overridden by the user.
+
+**Step 6 — Unified close-out.**
+Produce one consolidated summary spanning the whole sequence (format below) rather than letting each agent's individual close-out stand alone.
+
+**Step 7 — Promote.**
+Mark the originating `RawIdeas.md` entry as developed — do not delete it; cross-reference the file(s) it landed in, consistent with how `ToDoList.md` retains completed items rather than deleting them.
+
+### Develop Report Format
+
+```
+## DEVELOP SEQUENCE — [Date]
+
+**Originating idea:** [The raw idea as captured in RawIdeas.md]
+**Agents in sequence:** [Ordered list, with one-line justification for the order]
+
+---
+
+[Each agent's full session, in order, exactly as that agent's own format specifies]
+
+---
+
+## DEVELOP SEQUENCE COMPLETE
+
+### What Is Now Established
+[Facts confirmed across the whole sequence — written neutrally]
+
+### Still Unresolved
+[Gaps that remain after the full sequence]
+
+### Files Touched
+[Every auxiliary file that received new or candidate content]
+
+### Candidates List
+[Canon, glossary, name, and date candidates from across the whole sequence — labeled by type, awaiting confirmation per the same rules as individual agent sessions]
+
+### RawIdeas.md Status
+[Confirms the originating entry was marked developed and where it now points]
+```
+
+---
+
 ## AGENT ARCHITECTURE
 
 Agents are structured questioning tools. They are not characters, scholars, or roleplay personas. They do not have names, institutional affiliations, or narrative voices. They do not generate lore. Each agent's full specification — activation, interrogation style, purpose, question focus, routing notes, and output format — lives in its own file under `meta/agents/`. This file holds only the routing table and a pointer to shared behavior.
 
-Shared rules (followed by every agent unless its own file states a deviation) and the default output format live in [`meta/agents/_shared.md`](agents/_shared.md).
+Shared rules (followed by every agent unless its own file states a deviation) and the default output format live in [`meta/agents/_shared.md`](meta/agents/_shared.md).
 
 ### Agent Registry
 
 | Command | Spec File | Interrogation Style | Output Destination |
 |---|---|---|---|
-| `Run agent:chronicle [topic]` | [agents/chronicle.md](agents/chronicle.md) | One question at a time | `history/Eras.md`, `history/Events.md`, `history/Timeline.md` |
-| `Run agent:codex [topic]` | [agents/codex.md](agents/codex.md) | One question at a time | Varies — `powers/Factions.md`, `powers/Gods.md`, `foundation/Planes.md`, `world/Geography.md`, `systems/Artifacts.md`, `powers/NPCs.md` |
-| `Run agent:mechanism [system]` | [agents/mechanism.md](agents/mechanism.md) | One question at a time | Wherever the underlying system's authoritative file lives |
-| `Run agent:continuity [topic/file/"full"/"pending"]` | [agents/continuity.md](agents/continuity.md) | Report-then-discuss (deviation) | None — audit only |
-| `Run agent:geographer [topic]` | [agents/geographer.md](agents/geographer.md) | One question at a time — gated until `world/Geology.md` is ready | `world/Geology.md`, plus `world/Geography.md` via Step 7 handoff |
+| `Run agent:chronicle [topic]` | [agents/chronicle.md](meta/agents/chronicle.md) | One question at a time | `history/Eras.md`, `history/Events.md`, `history/Timeline.md` |
+| `Run agent:codex [topic]` | [agents/codex.md](meta/agents/codex.md) | One question at a time | Varies — `powers/Factions.md`, `powers/Gods.md`, `foundation/Planes.md`, `world/Geography.md`, `systems/Artifacts.md`, `powers/NPCs.md` |
+| `Run agent:mechanism [system]` | [agents/mechanism.md](meta/agents/mechanism.md) | One question at a time | Wherever the underlying system's authoritative file lives |
+| `Run agent:continuity [topic/file/"full"/"pending"]` | [agents/continuity.md](meta/agents/continuity.md) | Report-then-discuss (deviation) | None — audit only |
+| `Run agent:geographer [topic]` | [agents/geographer.md](meta/agents/geographer.md) | One question at a time — gated until `world/Geology.md` is ready | `world/Geology.md`, plus `world/Geography.md` via Step 7 handoff |
 
 ### Routing Priority When a Topic Could Fit Multiple Agents
 1. Event, era, or chronological relationship → `agent:chronicle`
@@ -505,5 +575,5 @@ See each agent's own file for full routing notes specific to that agent.
 
 ---
 
-*— meta/CLAUDE.md — Version 2.2.0 — Last updated 2026-06-22 —*
+*— CLAUDE.md — Version 2.3.0 — Last updated 2026-06-22 —*
 *This document governs behavior only. Lore lives in auxiliary files. Tracking data lives in the Tracking Files listed above.*

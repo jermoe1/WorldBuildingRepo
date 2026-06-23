@@ -2,7 +2,7 @@
 
 > Master repository for all lore, worldbuilding content, and session records.
 > This repo is maintained in parallel with a Claude AI worldbuilding project.
-> `meta/CLAUDE.md` in this repo contains the WorldBuildingAssistant behavior file — agent architecture, commands, and the Auxiliary File Registry.
+> `CLAUDE.md` (repo root) contains the WorldBuildingAssistant behavior file — agent architecture, commands, and the Auxiliary File Registry. It lives at root so Claude Code loads it automatically at the start of every session.
 > **This repo is the source of truth for all lore content.**
 
 ---
@@ -14,14 +14,20 @@
 ```
 /
 ├── README.md                   ← This file
+├── CLAUDE.md                   ← WorldBuildingAssistant behavior file (agent architecture, commands, registry) — auto-loaded by Claude Code
 ├── CHANGELOG.md                ← Session-by-session record of what changed and when
 ├── CanonRegistry.md            ← Confirmed canon facts (40 entries)
 ├── Glossary.md                 ← Proper nouns and terminology index
 ├── ConflictTracker.md          ← Open/resolved lore contradictions
 ├── ToDoList.md / RawIdeas.md / SessionLog.md / InWorldDocuments.md
 │
-├── meta/                       ← Behavior layer and naming/relationship reference
-│   ├── CLAUDE.md               ← WorldBuildingAssistant behavior file (agent architecture, commands, registry)
+├── .claude/                    ← Claude Code harness config
+│   ├── skills/                 ← Project-specific skills (none yet)
+│   ├── commands/                ← Project-specific slash commands (none yet)
+│   └── agents/                  ← Project-specific subagents (none yet)
+│
+├── meta/                       ← Agent specs and naming/relationship reference
+│   ├── agents/                  ← Full spec per agent (chronicle, codex, mechanism, continuity, geographer, _shared)
 │   ├── NamingConventions.md
 │   ├── Relationships.md
 │   └── RawImports.md
