@@ -5,7 +5,7 @@
 
 ## VERSION
 
-**Current Version:** 2.3.0
+**Current Version:** 2.4.0
 **Last Updated:** 2026-06-22
 **Format:** Semantic versioning — MAJOR.MINOR.PATCH
 
@@ -21,6 +21,7 @@
 
 | Version | Date | Summary of Changes |
 |---|---|---|
+| 2.4.0 | 2026-06-22 | Phone capture workflow established. New `meta/PhoneCapture.md` documents the full phone-to-repo handoff process; new `meta/ProjectCustomInstructions.md` holds copy-paste-ready custom instructions for the phone-scoped "Worldbuilding" Claude Project (capture + light triage only — no agent architecture, no canon-checking, since the phone session has no live repo access and Project Knowledge is a manual, desktop-only snapshot). `RawIdeas.md` gained a § Phone Captures — Unprocessed section to keep phone-originated entries visually distinct until triaged. Both new files registered in the Auxiliary File Registry as process docs, not lore. |
 | 2.3.0 | 2026-06-22 | **CLAUDE.md moved from `meta/CLAUDE.md` to repo root** so Claude Code auto-loads it at the start of every session instead of relying on it being manually read. `meta/` now holds only agent specs and naming/relationship reference files. `.claude/skills/`, `.claude/commands/`, `.claude/agents/` scaffolded for future Claude Code harness integrations. `Run develop:` command added — orchestrates a sequenced multi-agent interrogation pass over a single raw idea, ending in a unified candidates list and a mandatory pre-commit continuity check before anything is written. This is a command, not a 6th agent: it calls existing agents in sequence rather than asking its own questions. Documented in the new Develop Protocol section. `RawIdeas.md` and `meta/RawImports.md` headers clarified to state their distinct boundary (raw creative concept with no source import, vs. import content that failed classification). |
 | 2.2.0 | 2026-06-22 | Agent-by-agent decision pass completed for all five agents, plus three agents renamed for clarity: `agent:history` → `agent:chronicle`, `agent:lore` → `agent:codex` (resolved naming collision with the document's generic use of "lore"), `agent:researcher` → `agent:mechanism` (signals its "how does this work" lens more directly). Files renamed to match: `meta/agents/chronicle.md`, `meta/agents/codex.md`, `meta/agents/mechanism.md`. Key behavior changes: `agent:chronicle` scoped to one event/era per session with no cross-era causal linking and an explicit actor-naming branch question; `agent:codex` given six category-specific question variants and a mandatory `meta/Relationships.md` secondary write; `agent:mechanism` reframed as a domain-agnostic "how it works" lens (not limited to magic/mechanics) with numbers explicitly out of scope; `agent:continuity` given a new "pending" mode for pre-commit checks with 🔴 Conflicts now a hard block; `agent:geographer` given a Step 7 handoff directly into `agent:codex` for settlement founding and a strict no-backtrack re-entry rule. Shared rules expanded: user-triggered recap (rule 10) and mandatory pre-commit continuity check (rule 11) added to `_shared.md`. |
 | 2.1.0 | 2026-06-22 | Agent specs split out of CLAUDE.md into individual files under `meta/agents/` (history.md, lore.md, researcher.md, continuity.md, geographer.md, plus shared `_shared.md` for universal rules and default output format). CLAUDE.md now holds only the Agent Registry routing table. Universal Agent Behavior Rules amended: interrogation style is now per-agent (continuity.md documents its report-then-discuss deviation explicitly) rather than a single global one-question-at-a-time rule. Activation gating formalized as an allowed, explicitly-documented pattern (geographer.md). Cross-agent routing priority order added to resolve topic ambiguity between lore/history/researcher/geographer/continuity. |
@@ -105,6 +106,8 @@ This file is the **behavior layer** of the project — it defines how the AI act
 | File | Contents | Status |
 |---|---|---|
 | `meta/RawImports.md` | Holding area for Run import: content that could not be confidently placed | Scaffold — no lore content yet |
+| `meta/PhoneCapture.md` | Process doc — how phone-session ideas get from the "Worldbuilding" Claude Project into `RawIdeas.md` | Process doc — not lore, no template needed |
+| `meta/ProjectCustomInstructions.md` | Copy-paste-ready custom instructions for the phone-scoped "Worldbuilding" Claude Project | Process doc — keep in sync with the live Project setting |
 | `campaign/Premise.md` | Campaign logline, tonal register, player entry point, known story hooks | Scaffold — no lore content yet |
 | `campaign/Arcs.md` | Arc structure, encounters, set pieces — populated when campaign phase begins | Scaffold — no lore content yet |
 
@@ -119,7 +122,7 @@ This file is the **behavior layer** of the project — it defines how the AI act
 | `CanonRegistry.md` | All confirmed canonical facts — the inviolable source of truth for all lore assertions | `Run canon:` |
 | `Glossary.md` | All proper nouns, invented terminology, and recurring concepts — maintained alphabetically | `Run glossary:` |
 | `ToDoList.md` | Active tasks and outstanding work, prioritized | `Run todo:` |
-| `RawIdeas.md` | Raw, unprocessed creative ideas and concept fragments | `Run idea:` |
+| `RawIdeas.md` | Raw, unprocessed creative ideas and concept fragments. § Phone Captures holds entries pasted in from phone sessions — see `meta/PhoneCapture.md` | `Run idea:` (desktop) or phone capture handoff |
 | `SessionLog.md` | Session history — decisions, canon added, files modified | `Run log` |
 | `ConflictTracker.md` | All detected lore contradictions, resolved and unresolved | `Run conflict` / auto-flagged |
 | `InWorldDocuments.md` | Catalog of in-world documents being actively developed | `Run doc:` |

@@ -71,7 +71,13 @@
 
 ## Workflow
 
-### During a session (Claude app)
+### Quick capture (phone)
+- Short, low-effort sessions in the "Worldbuilding" Claude Project on the Android app
+- Capture only — no classification, no lore development, no canon-checking (Project Knowledge may be stale)
+- Full process: [`meta/PhoneCapture.md`](meta/PhoneCapture.md) | Custom instructions to paste in: [`meta/ProjectCustomInstructions.md`](meta/ProjectCustomInstructions.md)
+- Captures get pasted into `RawIdeas.md` § Phone Captures at the next desktop session, then triaged normally
+
+### During a session (Claude app, desktop)
 - Work happens in the Claude worldbuilding project
 - All personas, commands, and lore development happen there
 
